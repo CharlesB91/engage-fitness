@@ -142,4 +142,19 @@ body {
   color: black;
 }
 
+
+@media screen and (max-width: 600px) {
+  .centered {
+    font-size: 500%;
+  }
+  #home-text {
+    font-size: 200%  !important;
+  }
+  #main_carousel,#reviews {
+    height: 100% !important;
+  }
+  
+}
+
+
   
