@@ -96,3 +96,36 @@ body {
   #middle hr {
     width: 900px;
   }
+
+/* reviews */
+
+#reviews {
+    text-align: center;
+    height: 620px;
+    background-color: #8ca1a5;
+    overflow: hidden;
+  }
+  
+  #reviews h1 {
+    text-decoration: underline;
+  }
+  
+  .col h2 {
+    text-decoration: underline;
+  }
+  
+  #main_carousel {
+    height: 600px !important;
+  }
+  
+  #reviews p {
+    font-size: 150%;
+  }
+  
+  #review_img {
+    height: 300px !important;
+    width: 300px !important;
+    border-radius: 50%;
+    margin-top: 50px;
+  }
+  
