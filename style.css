@@ -36,3 +36,35 @@ body {
   margin-top: 10px;
   margin-left: 20px;
 }
+
+/* home image  */
+
+#box {
+    background-image: url("home-img.jpg");
+    height: 800px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+  }
+  
+  .centered {
+    color: white;
+    font-size: 1000%;
+    text-decoration: underline;
+    overflow: hidden;
+  }
+  
+  .waves-effect {
+    top: 50px;
+    color: white;
+    font-size: 300%;
+    background-color: #8ca1a5;
+  }
+  
+  .waves-effect:hover {
+    background-color: white;
+    color: #8ca1a5;
+  }
