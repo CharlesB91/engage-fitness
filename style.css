@@ -128,4 +128,18 @@ body {
     border-radius: 50%;
     margin-top: 50px;
   }
+
+  /* socials */
+
+#socials {
+  text-align: center;
+  height: 250px;
+}
+
+#socials i {
+  font-size: 300%;
+  padding: 20px;
+  color: black;
+}
+
   
