@@ -41,8 +41,8 @@ body {
 
 #box {
     background-image: url("home-img.jpg");
-    height: 800px;
-    background-position: center;
+    height: 700px;
+    background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
@@ -67,4 +67,32 @@ body {
   .waves-effect:hover {
     background-color: white;
     color: #8ca1a5;
+  }
+
+  /* About Content  */
+
+#middle {
+    text-align: center;
+    margin-bottom: 100px;
+  }
+  
+  #middle h3 {
+    text-decoration: underline;
+    margin-bottom: 50px;
+    margin-top: 50px;
+  }
+  
+  #middle i {
+    font-size: 250%;
+  }
+  
+  #middle p {
+    margin-top: 50px;
+    font-size: 200%;
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+  
+  #middle hr {
+    width: 900px;
   }
