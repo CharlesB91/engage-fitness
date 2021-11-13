@@ -6,6 +6,7 @@ from cloudinary.models import CloudinaryField
 
 # Models Table
 
+
 class Post(models.Model):
     # Title of work out with max length 200 which is a unique tile so its cant be used again
     title = models.CharField(max_length=200, unique=True)
@@ -17,6 +18,8 @@ class Post(models.Model):
     updated_on = models.DateTimeField(auto_now=True)
     # Workout illustration image which will be stored to cloudinary
     featured_image = CloudinaryField('image', default='placeholder')
+    # Workout instructions/content
+    content = models.TextField(default='SOME STRING')
     # This creates an index for the page
     excerpt = models.TextField(blank=True)
     # This indicates what date the workout was created on
