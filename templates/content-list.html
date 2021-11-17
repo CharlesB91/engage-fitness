@@ -50,21 +50,25 @@
     <section id="workout-area">
       <h1>Your Workouts</h1>
       <div class="row">
+        {% for post in post_list %}
         <div class="col s12 m4">
           <div class="card">
             <div class="card-image">
-              <img src="images/sample-1.jpg">
+              <img src='{{ post.featured_image.url}}'>
               <span class="card-title">Card Title</span>
             </div>
             <div class="card-content">
-              <p>I am a very simple card. I am good at containing small bits of information.
-              I am convenient because I require little markup to use effectively.</p>
+              <p>Author: {{ post.author}}</p>
+              <p>{{ post.title}}</p>
+              <p>{{ post.excerpt}}</p>
+              <p>{{ post.created_on}}</p>
             </div>
             <div class="card-action">
               <a href="#">This is a link</a>
             </div>
           </div>
         </div>
+        {% endfor %}
       </div>
     </section>
     <footer id="socials">
