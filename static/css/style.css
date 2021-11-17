@@ -40,7 +40,7 @@ body {
 /* home image  */
 
 #box {
-  background-image: url("home-img.jpg");
+  background-image: url('/static/img/home-img.jpg');
   height: 700px;
   background-position: top;
   background-repeat: no-repeat;
