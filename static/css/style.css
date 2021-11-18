@@ -142,20 +142,20 @@ body {
   color: black;
 }
 
-/* Workout Area Content */
+/* Workout Area Content Page */
 
 #workout-area {
-  height: 1100px; 
+  height: 1200px; 
   text-align: center;
   overflow: hidden;
 }
 
 #card-content img {
-  height: 250px !important;
+  height: 270px !important;
 }
 
 #socials2 {
-  color: white;
+  color: black;
   background-color: #8ca1a5;
   text-align: center;
   height: 250px;
@@ -168,7 +168,13 @@ body {
 #socials2 i {
   font-size: 300%;
   padding: 20px;
-  color: white;
+  color: black;
+}
+
+@media screen and (max-width: 1000px) {
+  #workout-area {
+    height: 1600px;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -182,4 +188,8 @@ body {
   #reviews {
     height: 1000px !important;
   }
+  #workout-area {
+    height: 3100px;
+  }
+
 }
