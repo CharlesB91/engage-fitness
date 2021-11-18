@@ -2,6 +2,7 @@
 
 /* Global */
 
+
 html,
 body {
   width: 100%;
@@ -15,7 +16,9 @@ body {
   font-family: "Bebas Neue", cursive;
 }
 
+
 /* nav bar */
+
 
 #nav {
   height: 100px;
@@ -37,7 +40,9 @@ body {
   margin-left: 20px;
 }
 
+
 /* home image  */
+
 
 #box {
   background-image: url('/static/img/home-img.jpg');
@@ -69,7 +74,9 @@ body {
   color: #8ca1a5;
 }
 
+
 /* About Content  */
+
 
 #middle {
   text-align: center;
@@ -97,7 +104,9 @@ body {
   width: 900px;
 }
 
+
 /* reviews */
+
 
 #reviews {
   text-align: center;
@@ -129,7 +138,9 @@ body {
   margin-top: 50px;
 }
 
+
 /* socials */
+
 
 #socials {
   text-align: center;
@@ -142,7 +153,9 @@ body {
   color: black;
 }
 
+
 /* Workout Area Content Page */
+
 
 #workout-area {
   height: 1200px; 
@@ -170,6 +183,17 @@ body {
   padding: 20px;
   color: black;
 }
+
+
+.action-btn {
+  font-size: 150%;
+  color:  #8ca1a5;
+}
+
+.action-btn:hover {
+  color: goldenrod;
+}
+
 
 /* Content Detail Page */
 
