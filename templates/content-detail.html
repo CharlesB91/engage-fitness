@@ -46,6 +46,10 @@
       </ul>
     </header>
     <section id="content-list-section">
+      <img src=" {{ post.featured_image.url }}" alt="featured-workout-imgae">
+      <h1>{{ post.title }}</h1>
+      <h4>{{ post.author }} | {{ post.created_on }}</h4>
+      <p>{{ post.content | safe }}</p>
     </section>
 
     <footer id="socials2">
