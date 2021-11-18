@@ -198,9 +198,20 @@ body {
 /* Content Detail Page */
 
 #content-list-section {
-  height: 800px !important;
+  height: 900px !important;
   overflow: hidden;
   text-align: center;
+}
+
+#content-list-section img {
+  width: 600px; 
+  height: 400px;
+  margin-top: 5px;
+}
+
+#content-info {
+  padding-left: 100px;
+  padding-right: 100px;
 }
 
 
@@ -209,14 +220,18 @@ body {
   #workout-area {
     height: 1600px;
   }
+  #content-info {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 
 @media screen and (max-width: 600px) {
   .centered {
-    font-size: 500%;
+    font-size: 600%;
   }
   #home-text {
-    font-size: 200% !important;
+    font-size: 250% !important;
   }
   #main_carousel,
   #reviews {
@@ -224,6 +239,16 @@ body {
   }
   #workout-area {
     height: 3100px;
+  }
+  #content-info {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  #content-list-section img {
+    height: 300px;
+    width: 400px; 
+    margin-top: 5px;
   }
 
 }
