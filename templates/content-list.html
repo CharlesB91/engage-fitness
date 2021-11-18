@@ -61,7 +61,7 @@
               <p>{{ post.created_on}}</p>
             </div>
             <div class="card-action">
-              <a href="#">This is a link</a>
+              <a href="{% url 'content-detail' post.slug %}">This is a link</a>
             </div>
           </div>
         </div>
