@@ -158,14 +158,15 @@ body {
 
 
 #workout-area {
-  height: 1200px; 
+  height: 1700px; 
   text-align: center;
   overflow: hidden;
 }
 
-#card-content img {
-  height: 270px !important;
+#workout-area img {
+  height: 500px !important;
 }
+
 
 #socials2 {
   color: black;
@@ -197,28 +198,12 @@ body {
 
 /* Content Detail Page */
 
-#content-list-section {
-  height: 900px !important;
-  overflow: hidden;
-  text-align: center;
-}
-
-#content-list-section img {
-  width: 600px; 
-  height: 400px;
-  margin-top: 5px;
-}
-
-#content-info {
-  padding-left: 100px;
-  padding-right: 100px;
-}
 
 
 
 @media screen and (max-width: 1000px) {
   #workout-area {
-    height: 1600px;
+    height: 2300px;
   }
   #content-info {
     padding-left: 20px;
@@ -238,17 +223,11 @@ body {
     height: 850px !important;
   }
   #workout-area {
-    height: 3100px;
+    height: 4500px;
   }
   #content-info {
     padding-left: 10px;
     padding-right: 10px;
-  }
-
-  #content-list-section img {
-    height: 300px;
-    width: 400px; 
-    margin-top: 5px;
   }
 
 }
