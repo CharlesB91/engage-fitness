@@ -9,7 +9,7 @@ body {
   height: 100%;
   margin: 0px;
   padding: 0px;
-  overflow-x: hidden;
+  overflow-x: hidden !important;
 }
 
 body {
@@ -169,6 +169,8 @@ body {
 
 
 #socials2 {
+  overflow: hidden;
+  clear: both;
   color: black;
   background-color: #8ca1a5;
   text-align: center;
@@ -198,7 +200,31 @@ body {
 
 /* Content Detail Page */
 
+#content-detail-section {
+  height: 1000px !important;
+  overflow: hidden;
+}
 
+#content-detail-section img {
+  margin-top: 5px;
+  margin-left: 20px;
+  height: 400px !important;
+  width: 400px !important;
+}
+
+.detail-header {
+  text-align: center;
+}
+
+#content-area {
+  padding-left: 30px !important;
+  padding-right: 30px !important;
+}
+
+#content-content {
+  clear: both;
+  text-align: center;
+}
 
 
 @media screen and (max-width: 1000px) {
@@ -208,6 +234,16 @@ body {
   #content-info {
     padding-left: 20px;
     padding-right: 20px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #content-detail-section {
+    height: 1200px;
+  }
+  iframe {
+    height: 400px;
+    width: 400px;
   }
 }
 
@@ -230,4 +266,14 @@ body {
     padding-right: 10px;
   }
 
+}
+
+@media screen and (max-width: 480px) {
+  #content-detail-section {
+    height: 1280px;
+  }
+  iframe {
+    height: 300px;
+    width: 300px;
+  }
 }

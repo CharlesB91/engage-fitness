@@ -48,12 +48,12 @@
       </ul>
     </header>
     <section id="content-detail-section">
-      <!-- <img src=" {{ post.featured_image.url }}">
-      <h1>{{ post.title }}</h1>
-      <h4>{{ post.author }} | {{ post.created_on }}</h4>
-      <div id="content-info">
-        <p>{{ post.content | safe }}</p>
-      </div> -->
+      <div class="left"><img src=" {{ post.featured_image.url }}"></div>
+      <h1 class="detail-header">{{ post.title }}</h1>
+      <h4 class="detail-header">{{ post.author }} | {{ post.created_on }}</h4>
+      <div id="content-area">
+        <p id="content-content">{{ post.content | safe }}</p>
+      </div>
     </section>
 
     <footer id="socials2">
