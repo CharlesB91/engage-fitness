@@ -17,7 +17,7 @@ body {
 }
 
 
-/* nav bar */
+/* Nav Bar */
 
 
 #nav {
@@ -41,7 +41,7 @@ body {
 }
 
 
-/* home image  */
+/* Home Image Area  */
 
 
 #box {
@@ -105,7 +105,7 @@ body {
 }
 
 
-/* reviews */
+/* Reviews */
 
 
 #reviews {
@@ -154,7 +154,7 @@ body {
 }
 
 
-/* Workout Area Content Page */
+/* Workout Area Content List Page */
 
 
 #workout-area {
@@ -200,6 +200,7 @@ body {
 
 /* Content Detail Page */
 
+
 #content-detail-section {
   height: 940px;
   overflow: hidden;
@@ -225,6 +226,9 @@ body {
   clear: both;
   text-align: center;
 }
+
+
+/* Responsive Styles */
 
 
 @media screen and (max-width: 1000px) {

@@ -1,7 +1,9 @@
+// Nav Bar
 $(document).ready(function () {
   $(".sidenav").sidenav();
 });
 
+// Carousel
 $(".carousel.carousel-slider").carousel({
   fullWidth: true,
   indicators: true,

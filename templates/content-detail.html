@@ -27,6 +27,7 @@
   </head>
   <body>
     <header>
+      <!-- Nav Bar -->
       <nav id="nav">
         <div class="nav-wrapper">
           <a href="/" class="brand-logo" id="home-text">Engage Fitness</a>
@@ -47,6 +48,7 @@
         <li><a href="#">Socials</a></li>
       </ul>
     </header>
+    <!-- Work Out Content Area -->
     <section id="content-detail-section">
       <div class="left"><img src=" {{ post.featured_image.url }}"></div>
       <h1 class="detail-header">{{ post.title }}</h1>
@@ -55,7 +57,7 @@
         <p id="content-content">{{ post.content | safe }}</p>
       </div>
     </section>
-
+    <!-- Social Bar -->
     <footer id="socials2">
       <h1>Socials</h1>
       <a href="https://www.instagram.com/" aria-label="link-to-instagram" target="_blank"
