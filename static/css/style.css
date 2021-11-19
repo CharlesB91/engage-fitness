@@ -232,6 +232,16 @@ body {
   font-size: 200%;
 }
 
+#comment-center {
+  display: flex;
+}
+
+
+#comment-text-head {
+  padding-left: 30px;
+  text-decoration: underline;
+}
+
 #comment-main {
   background-color: #B4C6A6;
   width: 500px;
@@ -252,6 +262,10 @@ body {
   margin-left: 0;
   width: 80px;
   text-decoration: solid black;
+}
+
+#comment-row {
+  padding-left: 20px;
 }
 
 /* Responsive Styles */

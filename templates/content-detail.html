@@ -56,6 +56,7 @@
       <div id="content-area">
         <p id="content-content">{{ post.content | safe }}</p> 
       </div>
+      <div id="comment-center"> 
         <div id="comment-main">
           <h2 class="comment-header">Comments</h2>
           {% with comments.count as total_comments %}
@@ -71,6 +72,21 @@
             {% endfor %}
           </div>
         </div>
+        <div>
+          <h2 id="comment-text-head">Leave A Comment</h2>
+          <div id="comment-row" class="row">
+            <form class="col s12">
+              <div class="row">
+                <div class="input-field col s12">
+                  <textarea id="textarea1" class="materialize-textarea"></textarea>
+                  <label for="textarea1">Textarea</label>
+                  <button>Post</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
     </section>
     <!-- Social Bar -->
     <footer id="socials2">
