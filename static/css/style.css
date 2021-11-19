@@ -202,8 +202,8 @@ body {
 
 
 #content-detail-section {
-  height: 940px;
-  overflow: hidden;
+  height: 1500px !important;
+  padding-left: 10px;
 }
 
 #content-detail-section img {
@@ -227,6 +227,32 @@ body {
   text-align: center;
 }
 
+.fa-comments {
+  padding: 20px;
+  font-size: 200%;
+}
+
+#comment-main {
+  background-color: #B4C6A6;
+  width: 500px;
+  height: 550px;
+  border-radius: 5%;
+}
+
+.comment-header {
+  padding-left:  20px;
+  text-decoration: underline;
+}
+
+.comment-area {
+  padding-left: 20px;
+}
+
+.comment-line {
+  margin-left: 0;
+  width: 80px;
+  text-decoration: solid black;
+}
 
 /* Responsive Styles */
 

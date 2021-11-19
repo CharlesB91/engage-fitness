@@ -52,10 +52,25 @@
     <section id="content-detail-section">
       <div class="left"><img src=" {{ post.featured_image.url }}"></div>
       <h1 class="detail-header">{{ post.title }}</h1>
-      <h4 class="detail-header">{{ post.author }} | {{ post.created_on }}</h4>
+      <h4 class="detail-header">{{ post.author }} | {{ post.created_on }}</h4>      
       <div id="content-area">
-        <p id="content-content">{{ post.content | safe }}</p>
+        <p id="content-content">{{ post.content | safe }}</p> 
       </div>
+        <div id="comment-main">
+          <h2 class="comment-header">Comments</h2>
+          {% with comments.count as total_comments %}
+          <strong ><i class="far fa-comments"></i>
+              {{ total_comments }}</strong>
+          {% endwith %}
+          <div class="comment-area">
+            {% for comment in comments %}
+            <h4>{{ comment.name }}</h4>
+            <h6>{{ comment.created_on }}</h6>
+            <h6>{{ comment.body | linebreaks }}</h6>
+            <hr class="comment-line">
+            {% endfor %}
+          </div>
+        </div>
     </section>
     <!-- Social Bar -->
     <footer id="socials2">
