@@ -27,25 +27,41 @@
   </head>
   <body>
     <header>
-      <!-- Nar Bar -->
+      <!-- Nav Bar -->
       <nav id="nav">
         <div class="nav-wrapper">
-          <a href="#!" class="brand-logo" id="home-text">Engage Fitness</a>
+          <a href="/" class="brand-logo" id="home-text">Engage Fitness</a>
           <a href="#" data-target="mobile-demo" class="sidenav-trigger"
             ><i class="fas fa-bars"></i
           ></a>
           <ul class="right hide-on-med-and-down" id="nav-link">
+            {% if user.is_authenticated %}
             <li><a href="#">Book 1-1 Session</a></li>
-            <li><a href="#">Log Out</a></li>
+            <li><a href="{% url 'account_logout' %}">Log Out</a></li>
+            {% else %}
+            <li><a href="{% url 'account_login' %}">Log In</a></li>
+            <li><a href="{% url 'account_signup' %}">Sign Up</a></li>
+            <li><a href="#middle">What We Do</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+            <li><a href="#socials">Socials</a></li>
             <li><a href="#">Socials</a></li>
+            {% endif %}
           </ul>
         </div>
       </nav>
 
       <ul class="sidenav" id="mobile-demo">
+        {% if user.is_authenticated %}
         <li><a href="#">Book 1-1 Session</a></li>
-        <li><a href="#">Log Out</a></li>
+        <li><a href="{% url 'account_logout' %}">Log Out</a></li>
+        {% else %}
+        <li><a href="{% url 'account_login' %}">Log In</a></li>
+        <li><a href="{% url 'account_signup' %}">Sign Up</a></li>
+        <li><a href="#middle">What We Do</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#socials">Socials</a></li>
         <li><a href="#">Socials</a></li>
+        {% endif %}
       </ul>
     </header>
     <!-- Work Out Content List -->
