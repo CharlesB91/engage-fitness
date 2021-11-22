@@ -62,14 +62,14 @@ body {
   overflow: hidden;
 }
 
-.btn-home {
+#btn-home, #btn-home2 {
   top: 50px;
   color: white;
   font-size: 300%;
   background-color: #8ca1a5;
 }
 
-.btn-home:hover {
+#btn-home:hover, #btn-home2:hover {
   background-color: white;
   color: #8ca1a5;
 }

@@ -7,11 +7,11 @@
     <section id="box">
       <h1 class="centered">TOMORROW IS NOW</h1>
       {% if user.is_authenticated %}
-      <a href="/home" class="waves-effect waves-light btn-large" class="btn-home" aria-label="work-outs-page"
+      <a href="/home" class="waves-effect waves-light btn-large" id="btn-home" aria-label="work-outs-page"
       ><i class="material-icons right"></i>Workouts</a
     >
       {% else %}
-      <a href="{% url 'account_signup' %}" class="waves-effect waves-light btn-large" class="btn-home" aria-label="sign-up-page"
+      <a href="{% url 'account_signup' %}" class="waves-effect waves-light btn-large" id="btn-home2" aria-label="sign-up-page"
         ><i class="material-icons right"></i>Sign Up</a
       >
       {% endif %}
