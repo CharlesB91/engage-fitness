@@ -12,14 +12,14 @@
         <div class="col s12 m6 l4" id="card-content">
           <div class="card card-content-list">
             <div class="card-image">
-              <img src='{{ post.featured_image.url}}'>
+              <img src='{{ post.featured_image.url}}' alt="featured-workout-image">
             </div>
             <div class="card-content">
               <h4> {{ post.title}}</h4>
               <h6>Author: {{ post.author}}</h6>
               <p>{{ post.excerpt}}</p>
               <p>{{ post.created_on}}</p>
-              <a class="action-btn" href="{% url 'content-detail' post.slug %}">Click To View Workout</a>
+              <a class="action-btn" href="{% url 'content-detail' post.slug %}" aria-label="view-workout">Click To View Workout</a>
             </div>
           </div>
         </div>

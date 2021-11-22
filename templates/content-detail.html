@@ -7,7 +7,7 @@
     {% if user.is_authenticated %}
     <!-- Work Out Content Area -->
     <section id="content-detail-section">
-      <div class="left"><img src=" {{ post.featured_image.url }}"></div>
+      <div class="left"><img src=" {{ post.featured_image.url }}" alt="featured-workout-image"></div>
       <h1 class="detail-header">{{ post.title }}</h1>
       <h4 class="detail-header">{{ post.author }} | {{ post.created_on }}</h4>      
       <div id="content-area">
