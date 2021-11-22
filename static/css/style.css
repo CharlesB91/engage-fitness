@@ -110,7 +110,7 @@ body {
 
 #reviews {
   text-align: center;
-  height: 520px;
+  height: 800px !important;
   background-color: #8ca1a5;
   overflow: hidden;
 }
@@ -135,9 +135,12 @@ body {
   height: 300px !important;
   width: 300px !important;
   border-radius: 50%;
-  margin-top: 50px;
 }
 
+.review-statement {
+  padding-left: 50px;
+  padding-right: 50px;
+}
 
 /* socials */
 
