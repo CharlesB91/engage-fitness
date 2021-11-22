@@ -62,14 +62,14 @@ body {
   overflow: hidden;
 }
 
-.waves-effect {
+#btn-home {
   top: 50px;
   color: white;
   font-size: 300%;
   background-color: #8ca1a5;
 }
 
-.waves-effect:hover {
+#btn-home:hover {
   background-color: white;
   color: #8ca1a5;
 }
@@ -234,6 +234,8 @@ body {
 
 #comment-center {
   display: flex;
+  justify-content: flex-start
+  
 }
 
 
@@ -265,8 +267,10 @@ body {
 }
 
 #comment-row {
+  margin: 0;
   padding-left: 20px;
 }
+
 
 /* Responsive Styles */
 

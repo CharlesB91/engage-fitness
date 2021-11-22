@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'django_summernote',
     'crispy_forms',
+    'crispy_forms_materialize',
     'fitness_app',
 ]
 
@@ -58,6 +59,7 @@ SITE_ID = 1
 LOGIN_REDIRECT_URL = '/home/'
 LOGOUT_REDIRECT_URL = '/'
 
+CRISPY_TEMPLATE_PACK = 'materialize_css_forms'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

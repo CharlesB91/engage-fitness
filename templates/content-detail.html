@@ -29,26 +29,25 @@
             {% endfor %}
           </div>
         </div>
-        <div class="col-md-4 card mb-4  mt-3 ">
-          <div class="card-body">
-              <!-- For later -->
-              {% if commented %}
-              <div role="alert">
-                  Your comment is awaiting approval
-              </div>
-              {% else %}
-              <h3>Leave a comment:</h3>
-              <p>Posting as: {{ user.username }}</p>
-              <form method="post">
-                  {{ comment_form | crispy }}
-                  {% csrf_token %}
-                  <button type="submit">Submit</button>
-              </form>
-              {% endif %}
+        <div class="row" id="comment-row">
+          {% if commented %}
+          <div role="alert">
+              Your comment is awaiting approval
           </div>
-      </div>
+          <div class="input-field">
+            {% else %}
+            <h3>Leave a comment:</h3>
+            <p>Posting as: {{ user.username }}</p>
+            <form method="post" id="comment-form">
+                {{ comment_form | crispy }}
+                {% csrf_token %}
+                <button type="submit" class="waves-effect waves-light btn">Submit</button>
+            </form>
+            {% endif %}
+          </div>
+        </div>
     </div>
-    </section>
+  </section>
 {% endif %}
  
 
