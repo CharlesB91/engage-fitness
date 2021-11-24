@@ -1,7 +1,8 @@
 from django.contrib import admin
-from .models import Post, Comment
+from .models import Post, Comment, Appointment
 from django_summernote.admin import SummernoteModelAdmin
 
+admin.site.register(Appointment)
 
 @admin.register(Post)
 class PostAdmin(SummernoteModelAdmin):

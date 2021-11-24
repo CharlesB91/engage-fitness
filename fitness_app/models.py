@@ -49,5 +49,18 @@ class Comment(models.Model):
     def __str__(self):
         return f"Comment {self.body} by {self.name}"
 
+class Appointment(models.Model):
+    appointmentUser = models.ForeignKey(User, on_delete=models.CASCADE, related_name="appointment_user")
+    start = models.DateTimeField()
+    end = models.DateTimeField()
+
+    def __str__(self):
+        return f" {self.appointmentUser} has booked {self.start} until {self.end}"
+
+
+
+
+
+
 
 
