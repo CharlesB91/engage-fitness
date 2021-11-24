@@ -1,13 +1,20 @@
 from django.shortcuts import render, get_object_or_404
 from django.views import generic, View
-from .models import Post
+from .models import Post, Appointment
 from .forms import CommentForm
+from django.views.generic import ListView
+
+
+def home_page(request):
+    return render(request, 'index.html')
+
 
 class PostList(generic.ListView):
     model = Post
     queryset = Post.objects.filter().order_by('-created_on')
     template_name = 'content-list.html'
     paginate_by = 6
+
 
 class PostDetail(View):
 
@@ -55,5 +62,6 @@ class PostDetail(View):
         )
 
 
-def home_page(request):
-    return render(request, 'index.html')
+class AppointmentList(ListView):
+    model = Appointment
+    template_name = 'booking_list.html'
