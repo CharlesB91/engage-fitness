@@ -1,8 +1,9 @@
 from django.shortcuts import render, get_object_or_404
 from django.views import generic, View
 from .models import Post, Appointment
-from .forms import CommentForm
-from django.views.generic import ListView
+from .forms import CommentForm, AvailabilityForm
+from .availability import checkAppointment
+from django.views.generic import ListView, FormView
 
 
 def home_page(request):
@@ -62,6 +63,16 @@ class PostDetail(View):
         )
 
 
-class AppointmentList(ListView):
-    model = Appointment
-    template_name = 'booking_list.html'
+class BookingView(FormView):
+    form_class = AvailabilityForm
+    template_name = "availability.html"
+    available_appointment = []
+
+    def form_valid(self, form):
+        data = form.cleaned_data
+        if checkAppointment(data["start_time"], data["end_time"]):
+            available_appointment.append
+        
+
+
+
