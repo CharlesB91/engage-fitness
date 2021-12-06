@@ -8,6 +8,10 @@
 </head>
 <body>
     <h1>booking_list</h1>
-   
+    <form action="" method="POST">
+        {{form.as_p}}
+        {% csrf_token %}
+        <button type="submit">Book</button>
+    </form>
 </body>
 </html>

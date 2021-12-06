@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, HttpResponse
 from django.views import generic, View
 from .models import Post, Appointment
 from .forms import CommentForm, AvailabilityForm
@@ -66,12 +66,20 @@ class PostDetail(View):
 class BookingView(FormView):
     form_class = AvailabilityForm
     template_name = "availability.html"
-    available_appointment = []
 
     def form_valid(self, form):
         data = form.cleaned_data
         if checkAppointment(data["start_time"], data["end_time"]):
-            available_appointment.append
+            booking = Appointment.objects.create(
+                appointmentUser = request.appointmentUser, 
+                start = data["start_time"],
+                end = data["end_time"]
+            )
+            booking.save()
+            return HttpResponse(booking)
+        else:
+            return HttpResponse("This appointment has been taken")
+
         
 
 
