@@ -7,6 +7,7 @@ class CommentForm(forms.ModelForm):
         fields = ('body',)
 
 class AvailabilityForm(forms.Form):
+    name = forms.CharField(max_length=80, required=True)
     start_time = forms.DateTimeField(required=True, input_formats=["%Y-%m-%dT%H:%M", ])
     end_time = forms.DateTimeField(required=True, input_formats=["%Y-%m-%dT%H:%M", ])
 

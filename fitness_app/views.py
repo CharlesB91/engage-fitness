@@ -70,10 +70,10 @@ class BookingView(FormView):
     def form_valid(self, form):
         data = form.cleaned_data
         if checkAppointment(data["start_time"], data["end_time"]):
-            booking = Appointment.objects.create(
-                appointmentUser = request.appointmentUser, 
-                start = data["start_time"],
-                end = data["end_time"]
+            booking=Appointment.objects.create(
+                name=data["name"], 
+                start=data["start_time"],
+                end=data["end_time"]
             )
             booking.save()
             return HttpResponse(booking)
