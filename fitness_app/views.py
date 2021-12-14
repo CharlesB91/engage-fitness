@@ -62,62 +62,32 @@ class PostDetail(View):
             },
         )
 
-
 class BookingView(FormView):
     form_class = AvailabilityForm
     template_name = "availability.html"
 
     def form_valid(self, form):
         data = form.cleaned_data
-        
         bookingList = Appointment.objects.filter()
+        
         for booking in bookingList:
-            if booking.start == data["start_time"] and booking.end == data["end_time"]:
-                print("Cant be booked")
+            if booking.start == data["start_time"]:
+                print(booking.start )
+                print(data["start_time"])
                 return HttpResponse("Cant be booked")
             else:
                 booking=Appointment.objects.create(
-                name=data["name"], 
-                start=data["start_time"],
-                end=data["end_time"]
-                )
+                    name=data["name"], 
+                    start=data["start_time"],
+                    end=data["end_time"]
+                    )
                 booking.save()
+                print(booking.start)
+                print(data["start_time"])
                 return HttpResponse("can be booked")
-            
+
+
+
 
 
         
-
-        
-        
-        # if checkAppointment(data["start_time"], data["end_time"]):
-        #     return HttpResponse("cant be booked")
-        # else:
-        #     return HttpResponse("Can be booked")
-        
-
-        # if len(available_appointment) > 0:
-        #     booking=Appointment.objects.create(
-        #     name=data["name"], 
-        #     start=data["start_time"],
-        #     end=data["end_time"]
-        #     )
-        #     booking.save()
-        #     return HttpResponse(booking)
-        # else:
-        #     return HttpResponse("This appointment has been taken")
-
-        #     booking=Appointment.objects.create(
-        #     name=data["name"], 
-        #     start=data["start_time"],
-        #     end=data["end_time"]
-        # )
-        # booking.save()
-        # return HttpResponse(booking)
-        # else:
-        #     return HttpResponse("This appointment has been taken")
-
-        
-
-
-

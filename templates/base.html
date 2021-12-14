@@ -38,7 +38,7 @@
           <ul class="right hide-on-med-and-down" id="nav-link">
             {% if user.is_authenticated %}
             <li><a href="/home">Work Outs</a></li>
-            <li><a href="#">Book 1-1 Session</a></li>
+            <li><a href="/availability">Book 1-1 Session</a></li>
             <li><a href="{% url 'account_logout' %}">Log Out</a></li>
             {% else %}
             <li><a href="{% url 'account_login' %}">Log In</a></li>
