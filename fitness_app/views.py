@@ -69,7 +69,7 @@ class BookingView(FormView):
     def form_valid(self, form):
         data = form.cleaned_data
         print(data)
-        bookingList = Appointment.objects.filter(start__gt= data['start_time'], end__lt= data['end_time'])
+        bookingList = Appointment.objects.filter(start__lt= data['end_time'], end__gt= data['start_time'])
         print(bookingList)
 
         if not bookingList:
