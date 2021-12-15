@@ -68,23 +68,39 @@ class BookingView(FormView):
 
     def form_valid(self, form):
         data = form.cleaned_data
-        bookingList = Appointment.objects.filter()
+        print(data)
+        bookingList = Appointment.objects.filter(start__gt= data['start_time'], end__lt= data['end_time'])
+        print(bookingList)
+
+        if not bookingList:
+            booking=Appointment.objects.create(
+                name=data["name"], 
+                start=data["start_time"],
+                end=data["end_time"]
+                )
+            booking.save()
+            print(booking.start)
+            print(data["start_time"])
+            return HttpResponse("can be booked")
+            return HttpResponse("cant be booked")
+        else:
+            return HttpResponse("cant be booked")
         
-        for booking in bookingList:
-            if booking.start == data["start_time"]:
-                print(booking.start )
-                print(data["start_time"])
-                return HttpResponse("Cant be booked")
-            else:
-                booking=Appointment.objects.create(
-                    name=data["name"], 
-                    start=data["start_time"],
-                    end=data["end_time"]
-                    )
-                booking.save()
-                print(booking.start)
-                print(data["start_time"])
-                return HttpResponse("can be booked")
+        # for booking in bookingList:
+        #     if booking.start__gt == data['start_time']:
+        #         booking=Appointment.objects.create(
+        #             name=data["name"], 
+        #             start=data["start_time"],
+        #             end=data["end_time"]
+        #             )
+        #         booking.save()
+        #         print(booking.start)
+        #         print(data["start_time"])
+        #         return HttpResponse("can be booked")
+        #     else:
+        #         print(booking.start )
+        #         print(data["start_time"])
+        #         return HttpResponse("Cant be booked")
 
 
 
