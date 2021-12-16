@@ -276,9 +276,13 @@ body {
 
 /* Booking Page */
 
-.booking-form-main {
-  width: 800px;
-  height: 800px;
+#book-head {
+  text-align: center;
+}
+
+.form-book {
+  width: 500px;
+  height: 500px;
 }
 
 /* Responsive Styles */

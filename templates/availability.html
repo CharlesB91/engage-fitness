@@ -3,11 +3,11 @@
 
 {% block content %}
 {% load static %}
-    <h1>booking_list</h1>
-    <form class="col s12" action="" method="POST">
+    <h1 id="book-head">Book Your 1-2-1 Session</h1>
+    <form class="form-book" action="" method="POST">
         {{form.as_p}}
         {% csrf_token %}
-        <button type="submit">Book</button>
+        <button class="btn btn-signup right" type="submit">Book</button>
     </form>
 {% endblock content %}
 

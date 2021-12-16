@@ -81,26 +81,9 @@ class BookingView(FormView):
             booking.save()
             print(booking.start)
             print(data["start_time"])
-            return HttpResponse("can be booked")
-            return HttpResponse("cant be booked")
+            return HttpResponse(booking)
         else:
             return HttpResponse("cant be booked")
-        
-        # for booking in bookingList:
-        #     if booking.start__gt == data['start_time']:
-        #         booking=Appointment.objects.create(
-        #             name=data["name"], 
-        #             start=data["start_time"],
-        #             end=data["end_time"]
-        #             )
-        #         booking.save()
-        #         print(booking.start)
-        #         print(data["start_time"])
-        #         return HttpResponse("can be booked")
-        #     else:
-        #         print(booking.start )
-        #         print(data["start_time"])
-        #         return HttpResponse("Cant be booked")
 
 
 
