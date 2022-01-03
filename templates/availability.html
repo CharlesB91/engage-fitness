@@ -1,13 +1,19 @@
 
 {% extends "base.html" %}
 
+
 {% block content %}
 {% load static %}
     <h1 id="book-head">Book Your 1-2-1 Session</h1>
     <div id="appointment-area">
         <form class="form-book" action="" method="POST">
-            {{form.as_p}}
             {% csrf_token %}
+            <label for="id_name">Name</label>
+            <input type="text" required_id="id_name" name="name" max_length="80" >
+            <label for="id_start_time">Start Time</label>
+            <input type="datetime-local" required_id="id_start_time" name="start_time">
+            <label for="id_end_time">End Time</label>
+            <input type="datetime-local" required_id="id_end_time" name="end_time">
             <button class="btn btn-signup right" type="submit">Book</button>
         </form>
     </div>
