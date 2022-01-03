@@ -4,10 +4,12 @@
 {% block content %}
 {% load static %}
     <h1 id="book-head">Book Your 1-2-1 Session</h1>
-    <form class="form-book" action="" method="POST">
-        {{form.as_p}}
-        {% csrf_token %}
-        <button class="btn btn-signup right" type="submit">Book</button>
-    </form>
+    <div id="appointment-area">
+        <form class="form-book" action="" method="POST">
+            {{form.as_p}}
+            {% csrf_token %}
+            <button class="btn btn-signup right" type="submit">Book</button>
+        </form>
+    </div>
 {% endblock content %}
 

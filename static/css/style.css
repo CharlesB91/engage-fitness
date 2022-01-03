@@ -285,6 +285,11 @@ body {
   height: 500px;
 }
 
+#appointment-area {
+  display: flex;
+  justify-content: center;
+}
+
 /* Responsive Styles */
 
 
