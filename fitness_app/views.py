@@ -1,8 +1,8 @@
-from django.shortcuts import render, get_object_or_404, HttpResponse
+from django.shortcuts import render, get_object_or_404
 from django.views import generic, View
 from .models import Post, Appointment
 from .forms import CommentForm, AvailabilityForm
-from django.views.generic import ListView, FormView
+from django.views.generic import ListView
 import datetime
 
 
@@ -63,15 +63,13 @@ class PostDetail(View):
         )
 
 class BookingView(View):
-    # form_class = AvailabilityForm
-    # template_name = "availability.html"
+
 
     def get(self, request, *args, **kwargs):
         return render(request, "availability.html")
 
 
     def post(self, request, *args, **kwargs):
-        # bookingList = Appointment.objects.filter(start__lt= data['end_time'], end__gt= data['start_time'])
         form =  AvailabilityForm(request.POST)
 
         if form.is_valid():
@@ -90,27 +88,7 @@ class BookingView(View):
             return render(request, "success.html")
         else:
             return render(request, "booked.html")
-        
 
-
-
-
-    # def form_valid(self, form):
-    #     data = form.cleaned_data
-    #     bookingList = Appointment.objects.filter(start__lt= data['end_time'], end__gt= data['start_time'])
-
-    #     if not bookingList:
-    #         booking=Appointment.objects.create(
-    #             name=data["name"], 
-    #             start=data["start_time"],
-    #             end=data["end_time"]
-    #             )
-    #         booking.save()
-    #         print(booking.start)
-    #         print(data["start_time"])
-    #         return HttpResponse(booking)
-    #     else:
-    #         return HttpResponse("cant be booked")
 
 
 
