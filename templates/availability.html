@@ -4,6 +4,7 @@
 
 {% block content %}
 {% load static %}
+    {% if user.is_authenticated %}
     <h1 id="book-head">Book Your 1-2-1 Session</h1>
     <div id="appointment-area">
         <form class="form-book" action="" method="POST">
@@ -17,5 +18,8 @@
             <button class="btn btn-signup right" type="submit">Book</button>
         </form>
     </div>
+    {% else %}
+    <h1>Please Log In</h1>
+    {% endif %}
 {% endblock content %}
 
