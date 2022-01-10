@@ -83,9 +83,10 @@ class BookingView(View):
                 end=data["end_time"]
                 )
             booking.save()
-            print(booking.start)
-            print(data["start_time"])
-            return render(request, "success.html")
+            print(booking.name)
+            return render(request, "success.html", {
+                "booking":booking
+            },)
         else:
             return render(request, "booked.html")
 
