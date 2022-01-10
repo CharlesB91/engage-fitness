@@ -89,7 +89,7 @@ class BookingView(View):
             print(data["start_time"])
             return render(request, "success.html")
         else:
-            return HttpResponse("cant be booked")
+            return render(request, "booked.html")
         
 
 
