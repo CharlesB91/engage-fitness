@@ -295,12 +295,14 @@ body {
 
 #success {
   text-align: center;
+  height: 600px;
 }
 
 /* Already Booked Page */
 
 #booked {
   text-align: center;
+  height: 600px;
 }
 
 
