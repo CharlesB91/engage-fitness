@@ -4,6 +4,7 @@ from .models import Post, Appointment
 from .forms import CommentForm, AvailabilityForm
 from django.views.generic import ListView
 import datetime
+from django.core.mail import send_mail
 
 
 def home_page(request):
@@ -85,6 +86,7 @@ class BookingView(View):
                 )
             booking.save()
             print(booking.name)
+            # send_mail("Test", "Test", "engage.fitness.training.1@gmail.com", ["charles_ballantyne@hotmail.co.uk"], fail_silently=False)
             return render(request, "success.html", {
                 "booking":booking
             },)

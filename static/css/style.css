@@ -19,6 +19,10 @@ body {
 
 /* Nav Bar */
 
+#paginate-nav {
+  background-color: none !important;
+}
+
 
 #nav {
   height: 100px;
