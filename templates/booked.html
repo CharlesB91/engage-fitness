@@ -1,17 +1,13 @@
-{% extends "base.html" %}
-
-{% block content %}
-{% load static %}
-
-    {% if user.is_authenticated %}
-    <div id="booked">
-        <h1>Sorry <b>{{name}}</b> This Appointment Has been Taken <i class="far fa-times-circle"></i> </h1>
-        <h4>Please Check Another Time Slot</h4>
-        <a class="btn btn-signup right" href="/availability">Book 1-1 Session</a>
-
-    </div>
-    {% else %}
-    <h1>Please Log In</h1>
-    {% endif %}
-
-{% endblock content %}
+{% extends "base.html" %} {% block content %} {% load static %} 
+{% if user.is_authenticated %}
+<div id="booked">
+  <h1>
+    Sorry <b>{{name}}</b> This Appointment Has been Taken
+    <i class="far fa-times-circle"></i>
+  </h1>
+  <h4>Please Check Another Time Slot</h4>
+  <a class="btn btn-signup right" href="/availability">Book 1-1 Session</a>
+</div>
+{% else %}
+<h1>Please Log In</h1>
+{% endif %} {% endblock content %}

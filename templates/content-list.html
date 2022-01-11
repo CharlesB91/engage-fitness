@@ -1,44 +1,47 @@
-{% extends "base.html" %}
+{% extends "base.html" %} {% block content %} {% load static %}
 
-{% block content %}
-{% load static %}
-
-    <!-- Work Out Content List -->
-    {% if user.is_authenticated %}
-    <section id="workout-area">
-      <h1>Your Workouts</h1>
-      <div class="row">
-        {% for post in post_list %}
-        <div class="col s12 m6 l4" id="card-content">
-          <div class="card card-content-list">
-            <div class="card-image">
-              <img src='{{ post.featured_image.url}}' alt="featured-workout-image">
-            </div>
-            <div class="card-content">
-              <h4> {{ post.title}}</h4>
-              <h6>Author: {{ post.author}}</h6>
-              <p>{{ post.excerpt}}</p>
-              <p>{{ post.created_on}}</p>
-              <a class="action-btn" href="{% url 'content-detail' post.slug %}" aria-label="view-workout">Click To View Workout</a>
-            </div>
-          </div>
+<!-- Work Out Content List -->
+{% if user.is_authenticated %}
+<section id="workout-area">
+  <h1>Your Workouts</h1>
+  <div class="row">
+    {% for post in post_list %}
+    <div class="col s12 m6 l4" id="card-content">
+      <div class="card card-content-list">
+        <div class="card-image">
+          <img
+            src="{{ post.featured_image.url}}"
+            alt="featured-workout-image"
+          />
         </div>
-        {% endfor %}
-        {% if is_paginated %}
-            <ul class="pagination justify-content-center">
-                {% if page_obj.has_previous %}
-                <li><a href="?page={{ page_obj.previous_page_number }}">&laquo; PREV </a></li>
-                {% endif %}
-                {% if page_obj.has_next %}
-                <li><a href="?page={{ page_obj.next_page_number }}"> NEXT &raquo;</a></li>
-    
-                {% endif %}
-            </ul>
-        {% endif %}
+        <div class="card-content">
+          <h4>{{ post.title}}</h4>
+          <h6>Author: {{ post.author}}</h6>
+          <p>{{ post.excerpt}}</p>
+          <p>{{ post.created_on}}</p>
+          <a
+            class="action-btn"
+            href="{% url 'content-detail' post.slug %}"
+            aria-label="view-workout"
+            >Click To View Workout</a
+          >
+        </div>
       </div>
-    </section>
-    {% else %}
-    <h1>Please Log In</h1>
-    {% endif %}
+    </div>
+    {% endfor %} {% if is_paginated %}
+    <ul class="pagination justify-content-center">
+      {% if page_obj.has_previous %}
+      <li>
+        <a href="?page={{ page_obj.previous_page_number }}">&laquo; PREV </a>
+      </li>
+      {% endif %} {% if page_obj.has_next %}
+      <li><a href="?page={{ page_obj.next_page_number }}"> NEXT &raquo;</a></li>
 
-{% endblock content %}
+      {% endif %}
+    </ul>
+    {% endif %}
+  </div>
+</section>
+{% else %}
+<h1>Please Log In</h1>
+{% endif %} {% endblock content %}

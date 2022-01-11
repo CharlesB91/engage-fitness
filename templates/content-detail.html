@@ -1,54 +1,47 @@
-{% extends "base.html" %}
-
-{% block content %}
-{% load static %}
-{% load crispy_forms_tags %}
-
-    {% if user.is_authenticated %}
-    <!-- Work Out Content Area -->
-    <section id="content-detail-section">
-      <div class="left"><img src=" {{ post.featured_image.url }}" alt="featured-workout-image"></div>
-      <h1 class="detail-header">{{ post.title }}</h1>
-      <h4 class="detail-header">{{ post.author }} | {{ post.created_on }}</h4>      
-      <div id="content-area">
-        <p id="content-content">{{ post.content | safe }}</p> 
+{% extends "base.html" %} {% block content %} {% load static %} 
+{% load crispy_forms_tags %} 
+{% if user.is_authenticated %}
+<!-- Work Out Content Area -->
+<section id="content-detail-section">
+  <div class="left">
+    <img src=" {{ post.featured_image.url }}" alt="featured-workout-image" />
+  </div>
+  <h1 class="detail-header">{{ post.title }}</h1>
+  <h4 class="detail-header">{{ post.author }} | {{ post.created_on }}</h4>
+  <div id="content-area">
+    <p id="content-content">{{ post.content | safe }}</p>
+  </div>
+  <div id="comment-center">
+    <div id="comment-main">
+      <h2 class="comment-header">Comments</h2>
+      {% with comments.count as total_comments %}
+      <strong><i class="far fa-comments"></i> {{ total_comments }}</strong>
+      {% endwith %}
+      <div class="comment-area">
+        {% for comment in comments %}
+        <h4>{{ comment.name }}</h4>
+        <h6>{{ comment.created_on }}</h6>
+        <h6>{{ comment.body | linebreaks }}</h6>
+        <hr class="comment-line" />
+        {% endfor %}
       </div>
-      <div id="comment-center"> 
-        <div id="comment-main">
-          <h2 class="comment-header">Comments</h2>
-          {% with comments.count as total_comments %}
-          <strong ><i class="far fa-comments"></i>
-              {{ total_comments }}</strong>
-          {% endwith %}
-          <div class="comment-area">
-            {% for comment in comments %}
-            <h4>{{ comment.name }}</h4>
-            <h6>{{ comment.created_on }}</h6>
-            <h6>{{ comment.body | linebreaks }}</h6>
-            <hr class="comment-line">
-            {% endfor %}
-          </div>
-        </div>
-        <div class="row" id="comment-row">
-          {% if commented %}
-          <div role="alert">
-              Your comment is awaiting approval
-          </div>
-          <div class="input-field">
-            {% else %}
-            <h3>Leave a comment:</h3>
-            <p>Posting as: {{ user.username }}</p>
-            <form method="post" id="comment-form">
-                {{ comment_form | crispy }}
-                {% csrf_token %}
-                <button type="submit" class="waves-effect waves-light btn">Submit</button>
-            </form>
-            {% endif %}
-          </div>
-        </div>
     </div>
-  </section>
-{% endif %}
- 
-
-{% endblock content %}
+    <div class="row" id="comment-row">
+      {% if commented %}
+      <div role="alert">Your comment is awaiting approval</div>
+      <div class="input-field">
+        {% else %}
+        <h3>Leave a comment:</h3>
+        <p>Posting as: {{ user.username }}</p>
+        <form method="post" id="comment-form">
+          {{ comment_form | crispy }} {% csrf_token %}
+          <button type="submit" class="waves-effect waves-light btn">
+            Submit
+          </button>
+        </form>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %} {% endblock content %}
