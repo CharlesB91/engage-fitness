@@ -3,8 +3,9 @@ from django.views import generic, View
 from .models import Post, Appointment
 from .forms import CommentForm, AvailabilityForm
 from django.views.generic import ListView
-import datetime
+from datetime import datetime
 from django.core.mail import send_mail
+from django.utils import timezone
 
 
 def home_page(request):
@@ -74,7 +75,12 @@ class BookingView(View):
 
         if form.is_valid():
             data = form. cleaned_data
-            
+
+        now = data["start_time"]
+
+        if now < timezone.now():
+            return render(request, "unsuccessful.html")
+
         bookingList = Appointment.objects.filter(start__lt=data['end_time'], end__gt=data['start_time'])
         if not bookingList:
             booking = Appointment.objects.create(
@@ -84,7 +90,7 @@ class BookingView(View):
                 end=data["end_time"]
                 )
             booking.save()
-            name_user = name = data["name"]
+            name_user = data["name"]
             start_time = data["start_time"]
             end_time = data["end_time"]
             email_user = data["email"]
