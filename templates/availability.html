@@ -10,13 +10,13 @@
         <form class="form-book" action="" method="POST">
             {% csrf_token %}
             <label for="id_name">Name</label>
-            <input type="text" required_id="id_name" name="name" max_length="80" >
+            <input type="text" required_id="id_name" name="name" max_length="80" required>
             <label for="id_email">Email</label>
-            <input type="email" required_id="id_email" name="email" max_length="80" >
+            <input type="email" required_id="id_email" name="email" max_length="80" required>
             <label for="id_start_time">Start Time</label>
-            <input type="datetime-local" required_id="id_start_time" name="start_time">
+            <input type="datetime-local" required_id="id_start_time" name="start_time" required>
             <label for="id_end_time">End Time</label>
-            <input type="datetime-local" required_id="id_end_time" name="end_time">
+            <input type="datetime-local" required_id="id_end_time" name="end_time" required>
             <button class="btn btn-signup right" type="submit">Book</button>
         </form>
     </div>
