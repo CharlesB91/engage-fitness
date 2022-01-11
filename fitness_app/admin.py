@@ -4,6 +4,7 @@ from django_summernote.admin import SummernoteModelAdmin
 
 admin.site.register(Appointment)
 
+
 @admin.register(Post)
 class PostAdmin(SummernoteModelAdmin):
     list_display = ('title', 'slug', 'created_on')
