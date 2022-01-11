@@ -79,6 +79,7 @@ class BookingView(View):
         if not bookingList:
             booking=Appointment.objects.create(
                 name=data["name"], 
+                email=data["email"],
                 start=data["start_time"],
                 end=data["end_time"]
                 )
