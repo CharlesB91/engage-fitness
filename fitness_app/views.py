@@ -85,8 +85,13 @@ class BookingView(View):
                 end=data["end_time"]
                 )
             booking.save()
-            print(booking.name)
-            # send_mail("Test", "Test", "engage.fitness.training.1@gmail.com", ["charles_ballantyne@hotmail.co.uk"], fail_silently=False)
+            start_time = start=data["start_time"]
+            end_time = end=data["end_time"]
+            email_user = email=data["email"]
+            send_mail("Virtual PT Session", "Thanks For Booking Your Appointment with us.\n" + 
+            f"Please join the following zoom link on {start_time} \n" +
+            " https://us04web.zoom.us/j/8339571591?pwd=dG9MQy9nUWN6a0F2dUo4L04rQkxPQT09",
+            "engage.fitness.training.1@gmail.com", [email_user], fail_silently=False)
             return render(request, "success.html", {
                 "booking":booking
             },)
