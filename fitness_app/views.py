@@ -88,7 +88,10 @@ class BookingView(View):
                 "booking":booking
             },)
         else:
-            return render(request, "booked.html")
+            name = data["name"]
+            return render(request, "booked.html",{
+                "name":name, 
+            },)
 
 
 
