@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
+import datetime
 
 # Create your models here.
 
@@ -33,7 +34,7 @@ class Comment(models.Model):
     email = models.EmailField()
     body = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
-    approved = models.BooleanField(default=False)
+    approved = models.BooleanField()
 
     class Meta:
         ordering = ["created_on"]
@@ -43,13 +44,15 @@ class Comment(models.Model):
 
 
 class Appointment(models.Model):
-    name = models.CharField(max_length=80, default="Name")
-    email = models.EmailField(max_length=254, default="Email")
-    start = models.DateTimeField()
-    end = models.DateTimeField()
+    name = models.CharField(max_length=80)
+    email = models.EmailField(max_length=254)
+    start_date = models.DateField()
+    start_time = models.TimeField()
+    end_date = models.DateField()
+    end_time = models.TimeField()
 
     def __str__(self):
-        return f"{self.email}  {self.name} has booked {self.start} until {self.end}"
+        return f"{self.email}  {self.name} has booked {self.start_date} & {self.start_time} until {self.end_date} & {self.end_time}"
 
 
 

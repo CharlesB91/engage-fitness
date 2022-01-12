@@ -80,31 +80,31 @@ class BookingView(View):
         
         
 
-        bookingList = Appointment.objects.filter(start__lt=data['end_time'], end__gt=data['start_time'])
-        if not bookingList:
-            booking = Appointment.objects.create(
-                name=data["name"], 
-                email=data["email"],
-                start=data["start_time"],
-                end=data["end_time"]
-                )
-            booking.save()
-            name_user = data["name"]
-            start_time = data["start_time"]
-            end_time = data["end_time"]
-            email_user = data["email"]
-            send_mail("Virtual PT Session", f"Thanks {name_user} For Booking Your Appointment with us.\n" + 
-            f"Please join the following zoom link on {start_time} \n" +
-            " https://us04web.zoom.us/j/8339571591?pwd=dG9MQy9nUWN6a0F2dUo4L04rQkxPQT09",
-            "engage.fitness.training.1@gmail.com", [email_user], fail_silently=True)
-            return render(request, "success.html", {
-                "booking":booking
-            },)
-        else:
-            name = data["name"]
-            return render(request, "booked.html",{
-                "name":name, 
-            },)
+        # bookingList = Appointment.objects.filter(start__lt=data['end_time'], end__gt=data['start_time'])
+        # if not bookingList:
+        #     booking = Appointment.objects.create(
+        #         name=data["name"], 
+        #         email=data["email"],
+        #         start=data["start_time"],
+        #         end=data["end_time"]
+        #         )
+        #     booking.save()
+        #     name_user = data["name"]
+        #     start_time = data["start_time"]
+        #     end_time = data["end_time"]
+        #     email_user = data["email"]
+        #     send_mail("Virtual PT Session", f"Thanks {name_user} For Booking Your Appointment with us.\n" + 
+        #     f"Please join the following zoom link on {start_time} \n" +
+        #     " https://us04web.zoom.us/j/8339571591?pwd=dG9MQy9nUWN6a0F2dUo4L04rQkxPQT09",
+        #     "engage.fitness.training.1@gmail.com", [email_user], fail_silently=True)
+        #     return render(request, "success.html", {
+        #         "booking":booking
+        #     },)
+        # else:
+        #     name = data["name"]
+        #     return render(request, "booked.html",{
+        #         "name":name, 
+        #     },)
 
 
 

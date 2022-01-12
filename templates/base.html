@@ -24,6 +24,7 @@
     ></script>
     <!-- CSS Stylesheet -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   </head>
   <body>
     <!-- Nav Bar -->
@@ -57,7 +58,7 @@
       <ul class="sidenav" id="mobile-demo">
         {% if user.is_authenticated %}
         <li><a href="/home">Work Outs</a></li>
-        <li><a href="/availability">Book 1-1 Session</a></li>
+        <li><a href="/availability.html">Book 1-1 Session</a></li>
         <li><a href="/#middle">What We Do</a></li>
         <li><a href="/#reviews">Reviews</a></li>
         <li><a href="/#socials">Socials</a></li>

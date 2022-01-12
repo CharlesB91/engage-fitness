@@ -1,23 +1,141 @@
-{% extends "base.html" %}
-{% block content %}
 {% load static %}
-    {% if user.is_authenticated %}
-    <h1 id="book-head">Book Your 1-2-1 Session</h1>
-    <div id="appointment-area">
-        <form class="form-book" action="" method="POST" id="datetimepicker1"> 
-            {% csrf_token %}
-            <label for="id_name">Name</label>
-            <input type="text" required_id="id_name" name="name" max_length="80" required>
-            <label for="id_email">Email</label>
-            <input type="email" required_id="id_email" name="email" max_length="80" required>
-            <label for="id_start_time">Start Time</label>
-            <input type="datetime-local" id="disableWeekends" required_id="id_start_time" name="start_time" required>
-            <label for="id_end_time">End Time</label>
-            <input type="datetime-local" required_id="id_end_time" name="end_time" required>
-            <button class="btn btn-signup right" type="submit">Book</button>
-        </form>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--Import materialize.css-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Font Awsome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+    <!-- Font Awesome Kit -->
+    <script
+      src="https://kit.fontawesome.com/aa5819adb1.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <!-- Nav Bar -->
+    <header>
+      <!-- Nav Bar -->
+      <nav id="nav">
+        <div class="nav-wrapper">
+          <a href="/" class="brand-logo" id="home-text">Engage Fitness</a>
+          <a href="#" data-target="mobile-demo" class="sidenav-trigger"
+            ><i class="fas fa-bars"></i
+          ></a>
+          <ul class="right hide-on-med-and-down" id="nav-link">
+            {% if user.is_authenticated %}
+            <li><a href="/home">Work Outs</a></li>
+            <li><a href="/availability">Book 1-1 Session</a></li>
+            <li><a href="/#middle">What We Do</a></li>
+            <li><a href="/#reviews">Reviews</a></li>
+            <li><a href="/#socials">Socials</a></li>
+            <li><a href="{% url 'account_logout' %}">Log Out</a></li>
+            {% else %}
+            <li><a href="{% url 'account_login' %}">Log In</a></li>
+            <li><a href="{% url 'account_signup' %}">Sign Up</a></li>
+            <li><a href="/#middle">What We Do</a></li>
+            <li><a href="/#reviews">Reviews</a></li>
+            <li><a href="/#socials">Socials</a></li>
+            {% endif %}
+          </ul>
+        </div>
+      </nav>
+
+      <ul class="sidenav" id="mobile-demo">
+        {% if user.is_authenticated %}
+        <li><a href="/home">Work Outs</a></li>
+        <li><a href="/availability.html">Book 1-1 Session</a></li>
+        <li><a href="/#middle">What We Do</a></li>
+        <li><a href="/#reviews">Reviews</a></li>
+        <li><a href="/#socials">Socials</a></li>
+        <li><a href="{% url 'account_logout' %}">Log Out</a></li>
+        {% else %}
+        <li><a href="{% url 'account_login' %}">Log In</a></li>
+        <li><a href="{% url 'account_signup' %}">Sign Up</a></li>
+        <li><a href="/#middle">What We Do</a></li>
+        <li><a href="/#reviews">Reviews</a></li>
+        <li><a href="/#socials">Socials</a></li>
+        {% endif %}
+      </ul>
+    </header>
+    {% block content %}
+        {% if user.is_authenticated %}
+        <h1 id="book-head">Book Your 1-2-1 Session</h1>
+        <div id="appointment-area">
+            <form class="form-book" action="" method="POST" id="datetimepicker1"> 
+                {% csrf_token %}
+                <label for="id_name">Name</label>
+                <input type="text" required_id="id_name" name="name" max_length="80" required>
+                <label for="id_email">Email</label>
+                <input type="email" required_id="id_email" name="email" max_length="80" required>
+                <label for="id_start_time">Start Time</label>
+                <input type="datetime-local" required_id="id_start_time" name="start_time" required>
+                <label for="id_end_time">End Time</label>
+                <input type="datetime-local" required_id="id_end_time" name="end_time" required>
+                <input type="text" class="datepicker">
+                <input type="text" class="timepicker">
+                <input type="text" class="datepicker">
+                <input type="text" class="timepicker">
+                <button class="btn btn-signup right" type="submit">Book</button>
+            </form>
+        </div>
     </div>
-    {% else %}
-    <h1>Please Log In</h1>
-    {% endif %}
-{% endblock content %}
+        {% else %}
+        <h1>Please Log In</h1>
+        {% endif %}
+    {% endblock content %}
+  
+
+    <!-- Social Media Area -->
+    <footer id="socials">
+      <h1>Socials</h1>
+      <a
+        href="https://www.instagram.com/"
+        aria-label="link-to-instagram"
+        target="_blank"
+        ><i class="fab fa-instagram"></i
+      ></a>
+      <a
+        href="https://en-gb.facebook.com/"
+        aria-label="link-to-facebook"
+        target="_blank"
+        ><i class="fab fa-facebook-square"></i
+      ></a>
+      <a
+        href="https://twitter.com/?lang=en"
+        aria-label="link-to-twitter"
+        target="_blank"
+        ><i class="fab fa-twitter-square"></i
+      ></a>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="{% static 'js/index.js' %}"></script>
+    <script>
+    $(document).ready(function(){
+    $('.timepicker').timepicker({
+    });
+  });
+  $(document).ready(function(){
+    $('.datepicker').datepicker({
+        disableWeekends: "True",
+        format: "dd/mm/yyyy" 
+    });
+  });
+    </script>
+  </body>
+</html>
