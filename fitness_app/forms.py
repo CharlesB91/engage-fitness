@@ -12,10 +12,10 @@ class CommentForm(forms.ModelForm):
 class AvailabilityForm(forms.Form):
     name = forms.CharField(max_length=80, required=True)
     email = forms.EmailField(max_length=254, required=True)
-    start_date = forms.DateField(required=True, input_formats=["%Y-%m-%d", ])
-    start_time = forms.TimeField(required=True, input_formats=["%H:%M", ])
-    end_date = forms.DateField(required=True, input_formats=["%Y-%m-%d", ])
-    end_time = forms.TimeField(required=True, input_formats=["%H:%M", ])
+    start_date = forms.DateField()
+    start_time = forms.TimeField()
+    end_date = forms.DateField()
+    end_time = forms.TimeField()
 
     def clean_start_time(self):
         start = self.cleaned_data.get('start_time')

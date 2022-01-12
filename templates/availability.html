@@ -74,31 +74,34 @@
     </header>
     {% block content %}
         {% if user.is_authenticated %}
-        <h1 id="book-head">Book Your 1-2-1 Session</h1>
-        <div id="appointment-area">
+        <!-- <h1 id="book-head">Book Your 1-2-1 Session</h1>
+          <div id="appointment-area">
             <form class="form-book" action="" method="POST" id="datetimepicker1"> 
                 {% csrf_token %}
                 <label for="id_name">Name</label>
-                <input type="text" required_id="id_name" name="name" max_length="80" required>
+                <input type="text" name="name" maxlength="80" required_id="id_name" required>
                 <label for="id_email">Email</label>
-                <input type="email" required_id="id_email" name="email" max_length="80" required>
+                <input type="email" required_id="id_email" name="email" max_length="254" required>
+                <label for="id_start_date">Start Date</label>
+                <input type="text" name="start_date" required_id="id_start_date" class="datepicker" required>
                 <label for="id_start_time">Start Time</label>
-                <input type="datetime-local" required_id="id_start_time" name="start_time" required>
+                <input type="text" name="start_time" required_id="id_start_time" class="timepicker" required>
+                <label for="id_end_date">End Date</label>
+                <input type="text" name="end_date" required_id="id_end_date" class="datepicker" required>
                 <label for="id_end_time">End Time</label>
-                <input type="datetime-local" required_id="id_end_time" name="end_time" required>
-                <input type="text" class="datepicker">
-                <input type="text" class="timepicker">
-                <input type="text" class="datepicker">
-                <input type="text" class="timepicker">
+                <input type="text" name="end_time" required_id="id_end_time" class="timepicker" required>
                 <button class="btn btn-signup right" type="submit">Book</button>
             </form>
-        </div>
-    </div>
+        </div> -->
+        <form action = "" method = "post">
+          {% csrf_token %}
+          {{form.as_p }}
+          <input type="submit" value=Submit">
+      </form>
         {% else %}
         <h1>Please Log In</h1>
         {% endif %}
     {% endblock content %}
-  
 
     <!-- Social Media Area -->
     <footer id="socials">
@@ -128,6 +131,7 @@
     <script>
     $(document).ready(function(){
     $('.timepicker').timepicker({
+      twelveHour: false
     });
   });
   $(document).ready(function(){
