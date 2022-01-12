@@ -75,11 +75,13 @@ class BookingView(View):
 
         if form.is_valid():
             data = form. cleaned_data
-
-        now = data["start_time"]
-
-        if now < timezone.now():
+        else:
             return render(request, "unsuccessful.html")
+
+        # now = data["start_time"]
+
+        # if now < timezone.now():
+        #     return render(request, "unsuccessful.html")
 
         bookingList = Appointment.objects.filter(start__lt=data['end_time'], end__gt=data['start_time'])
         if not bookingList:
