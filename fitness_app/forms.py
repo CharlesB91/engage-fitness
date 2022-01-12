@@ -19,6 +19,6 @@ class AvailabilityForm(forms.Form):
         start = self.cleaned_data.get('start_time')
         if start < timezone.now():
             raise forms.ValidationError('the date must be after now.')
-        return data
+        return start
 
 
