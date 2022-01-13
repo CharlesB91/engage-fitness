@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, HttpResponse
 from django.views import generic, View
 from .models import Post, Appointment
 from .forms import CommentForm, AvailabilityForm
@@ -69,45 +69,43 @@ class BookingView(View):
 
 
     def get(self, request, *args, **kwargs):
-        form = AvailabilityForm(request.POST)
-        return render(request, "availability.html",{
-            "form":form
-        })
+        
+        return render(request, "availability.html")
 
     def post(self, request, *args, **kwargs):
         form = AvailabilityForm(request.POST)
 
         if form.is_valid():
-            data = form.cleaned_data
-        else:
-            return render(request, "unsuccessful.html")
+            data = form. cleaned_data
         
         
-        bookingList = Appointment.objects.filter(start__lt=data['end_time'], end__gt=data['start_time'])
-        if not bookingList:
-            booking = Appointment.objects.create(
-                name=data["name"], 
-                email=data["email"],
-                start=data["start_time"],
-                end=data["end_time"]
-                )
-            booking.save()
-            name_user = data["name"]
-            start_time = data["start_time"]
-            end_time = data["end_time"]
-            email_user = data["email"]
-            send_mail("Virtual PT Session", f"Thanks {name_user} For Booking Your Appointment with us.\n" + 
-            f"Please join the following zoom link on {start_time} \n" +
-            " https://us04web.zoom.us/j/8339571591?pwd=dG9MQy9nUWN6a0F2dUo4L04rQkxPQT09",
-            "engage.fitness.training.1@gmail.com", [email_user], fail_silently=True)
-            return render(request, "success.html", {
-                "booking":booking
-            },)
-        else:
-            name = data["name"]
-            return render(request, "booked.html",{
-                "name":name, 
-            },)
+        # bookingList = Appointment.objects.filter(start__lt=data['end_time'], end__gt=data['start_time'])
+        # if not bookingList:
+        booking = Appointment.objects.create(
+            name=data["name"], 
+            email=data["email"],
+            start_date=data["start_date"],
+            start_time=data["start_time"],
+            end_date=data["end_date"],
+            end_time=data["end_time"],
+            )
+        booking.save()
+        name_user = data["name"]
+        start_email = data["start_date"]
+        start_email2 = data["start_time"]
+        email_user = data["email"]
+        send_mail("Virtual PT Session", f"Thanks {name_user} For Booking Your Appointment with us.\n" + 
+        f"Please join the following zoom link on {start_email} {start_email2} \n" +
+        " https://us04web.zoom.us/j/8339571591?pwd=dG9MQy9nUWN6a0F2dUo4L04rQkxPQT09",
+        "engage.fitness.training.1@gmail.com", [email_user], fail_silently=True)
+        return render(request, "success.html", {
+            "booking":booking
+        },)
+    # else:
+    #     name = data["name"]
+    #     return render(request, "booked.html",{
+    #         "name":name, 
+    #     },)
 
 
 

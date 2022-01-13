@@ -74,7 +74,7 @@
     </header>
     {% block content %}
         {% if user.is_authenticated %}
-        <!-- <h1 id="book-head">Book Your 1-2-1 Session</h1>
+        <h1 id="book-head">Book Your 1-2-1 Session</h1>
           <div id="appointment-area">
             <form class="form-book" action="" method="POST" id="datetimepicker1"> 
                 {% csrf_token %}
@@ -92,12 +92,7 @@
                 <input type="text" name="end_time" required_id="id_end_time" class="timepicker" required>
                 <button class="btn btn-signup right" type="submit">Book</button>
             </form>
-        </div> -->
-        <form action = "" method = "post">
-          {% csrf_token %}
-          {{form.as_p }}
-          <input type="submit" value=Submit">
-      </form>
+        </div>
         {% else %}
         <h1>Please Log In</h1>
         {% endif %}
@@ -137,7 +132,8 @@
   $(document).ready(function(){
     $('.datepicker').datepicker({
         disableWeekends: "True",
-        format: "dd/mm/yyyy" 
+        format: 'yyyy-mm-dd'
+ 
     });
   });
     </script>

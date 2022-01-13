@@ -164,3 +164,7 @@ EMAIL_PORT = 587
 EMAIL_HOST_USER = 'engage.fitness.training.1@gmail.com' 
 EMAIL_HOST_PASSWORD = 'lykuuevfdqlqlsla' 
 DEFAULT_FROM_EMAIL = 'engage.fitness.training.1@gmail.com'
+
+
+DATE_INPUT_FORMATS = ['%d-%m-%Y']
+TIME_INPUT_FORMATS = ['%H:%M']
