@@ -6,6 +6,7 @@ from django.views.generic import ListView
 from datetime import datetime
 from django.core.mail import send_mail
 from django.utils import timezone
+import datetime as dt
 
 
 def home_page(request):
@@ -79,33 +80,57 @@ class BookingView(View):
             data = form. cleaned_data
         
         
-        # bookingList = Appointment.objects.filter(start__lt=data['end_time'], end__gt=data['start_time'])
-        # if not bookingList:
-        booking = Appointment.objects.create(
-            name=data["name"], 
-            email=data["email"],
-            start_date=data["start_date"],
-            start_time=data["start_time"],
-            end_date=data["end_date"],
-            end_time=data["end_time"],
-            )
-        booking.save()
-        name_user = data["name"]
-        start_email = data["start_date"]
-        start_email2 = data["start_time"]
-        email_user = data["email"]
-        send_mail("Virtual PT Session", f"Thanks {name_user} For Booking Your Appointment with us.\n" + 
-        f"Please join the following zoom link on {start_email} {start_email2} \n" +
-        " https://us04web.zoom.us/j/8339571591?pwd=dG9MQy9nUWN6a0F2dUo4L04rQkxPQT09",
-        "engage.fitness.training.1@gmail.com", [email_user], fail_silently=True)
-        return render(request, "success.html", {
-            "booking":booking
-        },)
-    # else:
-    #     name = data["name"]
-    #     return render(request, "booked.html",{
-    #         "name":name, 
-    #     },)
+        bookingList = Appointment.objects.filter(start_date=data['end_date'], end_date=data['start_date'])
+
+        if not bookingList:
+            booking = Appointment.objects.create(
+                name=data["name"], 
+                email=data["email"],
+                start_date=data["start_date"],
+                start_time=data["start_time"],
+                end_date=data["end_date"],
+                end_time=data["end_time"],
+                )
+            booking.save()
+            name_user = data["name"]
+            start_email = data["start_date"]
+            start_email2 = data["start_time"]
+            email_user = data["email"]
+            send_mail("Virtual PT Session", f"Thanks {name_user} For Booking Your Appointment with us.\n" + 
+            f"Please join the following zoom link on {start_email} {start_email2} \n" +
+            " https://us04web.zoom.us/j/8339571591?pwd=dG9MQy9nUWN6a0F2dUo4L04rQkxPQT09",
+            "engage.fitness.training.1@gmail.com", [email_user], fail_silently=True)
+            return render(request, "success.html", {
+                "booking":booking
+            },)
+        else:
+            bookingList2 = Appointment.objects.filter(start_time__lt=data['end_time'], end_time__gt=data['start_time'])
+            if not bookingList2:
+                booking = Appointment.objects.create(
+                    name=data["name"], 
+                    email=data["email"],
+                    start_date=data["start_date"],
+                    start_time=data["start_time"],
+                    end_date=data["end_date"],
+                    end_time=data["end_time"],
+                    )
+                booking.save()
+                name_user = data["name"]
+                start_email = data["start_date"]
+                start_email2 = data["start_time"]
+                email_user = data["email"]
+                send_mail("Virtual PT Session", f"Thanks {name_user} For Booking Your Appointment with us.\n" + 
+                f"Please join the following zoom link on {start_email} {start_email2} \n" +
+                " https://us04web.zoom.us/j/8339571591?pwd=dG9MQy9nUWN6a0F2dUo4L04rQkxPQT09",
+                "engage.fitness.training.1@gmail.com", [email_user], fail_silently=True)
+                return render(request, "success.html", {
+                    "booking":booking
+                },)
+            else:
+                name = data["name"]
+                return render(request, "booked.html",{
+                    "name":name, 
+                },)
 
 
 
