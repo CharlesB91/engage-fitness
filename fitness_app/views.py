@@ -82,7 +82,7 @@ class BookingView(View):
             return render(request, "unsuccessful.html")
         
         
-        bookingList = Appointment.objects.filter(start_date=data['end_date'], end_date=data['start_date'])
+        bookingList = Appointment.objects.filter(start_date__lt=data['end_date'], end_date__gt=data['start_date'])
 
         if not bookingList:
             booking = Appointment.objects.create(
