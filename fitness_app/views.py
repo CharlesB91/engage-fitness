@@ -7,6 +7,8 @@ from datetime import datetime
 from django.core.mail import send_mail
 from django.utils import timezone
 import datetime as dt
+from itertools import chain
+
 
 
 def home_page(request):
@@ -81,10 +83,11 @@ class BookingView(View):
         else:
             return render(request, "unsuccessful.html")
         
-        
-        bookingList = Appointment.objects.filter(start_date__lt=data['end_date'], end_date__gt=data['start_date'])
+        bookingList = Appointment.objects.filter(start_date=data['end_date'], end_date=data['start_date'])
+        bookingListMax = Appointment.objects.filter(start_date__lt=data['end_date'], end_date__gt=data['start_date'])
+        result_list = list(chain(bookingList, bookingListMax))
 
-        if not bookingList:
+        if not result_list:
             booking = Appointment.objects.create(
                 name=data["name"], 
                 email=data["email"],

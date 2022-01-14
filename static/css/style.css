@@ -226,6 +226,7 @@ body {
 }
 
 #content-content {
+  font-family: "Bebas Neue", cursive !important;
   clear: both;
   text-align: center;
 }
