@@ -298,6 +298,10 @@ body {
   height: 600px;
 }
 
+#tick {
+   color: green;
+}
+
 /* Already Booked Page */
 
 #booked {
@@ -305,6 +309,9 @@ body {
   height: 600px;
 }
 
+#cross {
+  color: red;
+}
 
 /* Responsive Styles */
 

@@ -78,6 +78,8 @@ class BookingView(View):
 
         if form.is_valid():
             data = form. cleaned_data
+        else:
+            return render(request, "unsuccessful.html")
         
         
         bookingList = Appointment.objects.filter(start_date=data['end_date'], end_date=data['start_date'])
