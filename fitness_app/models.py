@@ -46,13 +46,11 @@ class Comment(models.Model):
 class Appointment(models.Model):
     name = models.CharField(max_length=80)
     email = models.EmailField(max_length=254)
-    start_date = models.DateField()
-    start_time = models.TimeField()
-    end_date = models.DateField()
-    end_time = models.TimeField()
+    start_date = models.DateTimeField()
+    end_date = models.DateTimeField()
 
     def __str__(self):
-        return f"{self.email}  {self.name} has booked {self.start_date} & {self.start_time} until {self.end_date} & {self.end_time}"
+        return f"{self.email}  {self.name} has booked {self.start_date} & until {self.end_date}"
 
 
 

@@ -82,14 +82,10 @@
                 <input type="text" name="name" maxlength="80" required_id="id_name" required>
                 <label for="id_email">Email</label>
                 <input type="email" required_id="id_email" name="email" max_length="254" required>
-                <label for="id_start_date">Start Date</label>
-                <input type="text" name="start_date" required_id="id_start_date" class="datepicker" required>
-                <label for="id_start_time">Start Time</label>
-                <input type="text" name="start_time" required_id="id_start_time" class="timepicker" required>
-                <label for="id_end_date">End Date</label>
-                <input type="text" name="end_date" required_id="id_end_date" class="datepicker" required>
-                <label for="id_end_time">End Time</label>
-                <input type="text" name="end_time" required_id="id_end_time" class="timepicker" required>
+                <label for="id_start_date">Start Date & Time</label>
+                <input type="text" name="start_date" required_id="id_start_date" placeholder="Select Date & Time" id="datetime" required/>
+                <label for="id_end_date">End Date & Time</label>
+                <input type="text" name="end_date" required_id="id_end_date" placeholder="Select Date & Time" class="datepicker" id="datetime2" required>
                 <button class="btn btn-signup right" type="submit">Book</button>
             </form>
         </div>
@@ -97,7 +93,6 @@
         <h1>Please Log In</h1>
         {% endif %}
     {% endblock content %}
-
     <!-- Social Media Area -->
     <footer id="socials">
       <h1>Socials</h1>
@@ -124,18 +119,101 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="{% static 'js/index.js' %}"></script>
     <script>
-    $(document).ready(function(){
-    $('.timepicker').timepicker({
-      twelveHour: false
-    });
-  });
-  $(document).ready(function(){
-    $('.datepicker').datepicker({
-        disableWeekends: "True",
-        format: 'yyyy-mm-dd'
- 
-    });
-  });
+       var MaterialDateTimePicker = {
+        control: null,
+        dateRange: null,
+        pickerOptions: null,
+        create: function (element) {
+          this.control =
+            element == undefined
+              ? $("#" + localStorage.getItem("element"))
+              : element;
+          element = this.control;
+          if (this.control.is("input[type='text']")) {
+            var defaultDate = new Date();
+            element.off("click");
+            element.datepicker({
+              format: "yyyy-mm-dd",
+              selectMonths: true,
+              dismissable: false,
+              autoClose: true,
+              onClose: function () {
+                element.datepicker("destroy");
+                element.timepicker({
+                  dismissable: false,
+                  twelveHour: false,
+                  onSelect: function (hr, min) {
+                    element.attr("selectedTime", (hr + ":" + min).toString());
+                  },
+                  onCloseEnd: function () {
+                    element.blur();
+                  },
+                });
+                $("button.btn-flat.timepicker-close.waves-effect")[0].remove();
+
+                if (element.val() != "") {
+                  element.attr("selectedDate", element.val().toString());
+                } else {
+                  element.val(
+                    defaultDate.getFullYear().toString() +
+                      "/" +
+                      (defaultDate.getMonth() + 1).toString() +
+                      "/" +
+                      defaultDate.getDate().toString()
+                  );
+                  element.attr("selectedDate", element.val().toString());
+                }
+                element.timepicker("open");
+              },
+            });
+            element.unbind("change");
+            element.off("change");
+            element.on("change", function () {
+              if (element.val().indexOf(":") > -1) {
+                element.attr("selectedTime", element.val().toString());
+                element.val(
+                  element.attr("selectedDate") +
+                    " " +
+                    element.attr("selectedTime")
+                );
+                element.timepicker("destroy");
+                element.unbind("click");
+                element.off("click");
+                element.on("click", function (e) {
+                  element.val("");
+                  element.removeAttr("selectedDate");
+                  element.removeAttr("selectedTime");
+                  localStorage.setItem("element", element.attr("id"));
+                  MaterialDateTimePicker.create.call(element);
+                  element.trigger("click");
+                });
+              }
+            });
+            $(
+              "button.btn-flat.datepicker-cancel.waves-effect, button.btn-flat.datepicker-done.waves-effect"
+            ).remove();
+            this.addCSSRules();
+            return element;
+          } else {
+            console.error(
+              "The HTML Control provided is not a valid Input Text type."
+            );
+          }
+        },
+        addCSSRules: function () {
+          $("html > head").append(
+            $("<style>div.modal-overlay { pointer-events:none; }</style>")
+          );
+        },
+      };
+      $(document).ready(function () {
+        M.AutoInit();
+        var DateField = MaterialDateTimePicker.create($("#datetime"));
+      });
+      $(document).ready(function () {
+        M.AutoInit();
+        var DateField = MaterialDateTimePicker.create($("#datetime2"));
+      });
     </script>
   </body>
 </html>

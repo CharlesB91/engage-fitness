@@ -14,16 +14,6 @@ class CommentForm(forms.ModelForm):
 class AvailabilityForm(forms.Form):
     name = forms.CharField(max_length=80, required=True)
     email = forms.EmailField(max_length=254, required=True)
-    start_date = forms.DateField(required=True, input_formats=['%Y-%m-%d'])
-    start_time = forms.TimeField(required=True, input_formats=["%H:%M"])
-    end_date = forms.DateField(required=True, input_formats=['%Y-%m-%d'])
-    end_time = forms.TimeField(required=True, input_formats=["%H:%M"])
-
-
-    # def clean_start_time(self):
-    #     start = self.cleaned_data.get('start_date')
-    #     if start < timezone.now():
-    #         raise forms.ValidationError('the date must be after now.')
-    #     return start
-
+    start_date = forms.DateTimeField(required=True, input_formats=['%Y-%m-%d%H:%M'])
+    end_date = forms.DateTimeField(required=True, input_formats=['%Y-%m-%d%H:%M'])
 
