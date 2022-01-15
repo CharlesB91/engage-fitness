@@ -136,12 +136,3 @@ class BookingView(View):
                 return render(request, "booked.html",{
                     "name":name, 
                 },)
-
-
-
-
-
-
-
-
-        
