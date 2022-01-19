@@ -102,7 +102,7 @@ class BookingView(View):
                       "https://us04web.zoom.us/j/8339571591?pwd=" +
                       "dG9MQy9nUWN6a0F2dUo4L04rQkxPQT09",
                       "engage.fitness.training.1@gmail.com", [email_user],
-                      fail_silently=True)
+                      fail_silently=False)
             return render(request, "success.html", {
                 "booking": booking
             },)
