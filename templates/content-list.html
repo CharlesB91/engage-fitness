@@ -2,6 +2,9 @@
 
 <!-- Work Out Content List -->
 {% if user.is_authenticated %}
+{% if user.is_superuser %}
+<h1>Hello</h1>
+{% endif %}
 <section id="workout-area">
   <h1>Your Workouts</h1>
   <div class="row">

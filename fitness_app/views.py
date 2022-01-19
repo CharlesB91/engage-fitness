@@ -4,6 +4,7 @@ from .models import Post, Appointment
 from .forms import CommentForm, AvailabilityForm
 from django.views.generic import ListView
 from django.core.mail import send_mail
+from django.utils import timezone
 
 
 def home_page(request):
@@ -74,6 +75,7 @@ class BookingView(View):
 
         if form.is_valid():
             data = form. cleaned_data
+            print(timezone.now())
         else:
             return render(request, "unsuccessful.html")
 

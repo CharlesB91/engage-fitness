@@ -50,8 +50,7 @@ class Appointment(models.Model):
     end_date = models.DateTimeField()
 
     def __str__(self):
-        return f"{self.email}  {self.name} has booked"
-        f"{self.start_date} & until {self.end_date}"
+        return f"{self.email} {self.name} has booked {self.start_date} & until {self.end_date}"
 
 
 
