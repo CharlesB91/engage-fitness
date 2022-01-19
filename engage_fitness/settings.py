@@ -32,6 +32,7 @@ DEBUG = False
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
+
 # X_FRAME_OPTIONS = 'SAMEORIGIN'
 
 ALLOWED_HOSTS = ['engagefitness.herokuapp.com', 'localhost']
@@ -54,7 +55,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'django_summernote',
     'crispy_forms',
-    # 'crispy_forms_materialize',
+    'crispy_forms_materialize',
     'fitness_app',
 ]
 
