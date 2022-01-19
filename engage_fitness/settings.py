@@ -54,7 +54,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'django_summernote',
     'crispy_forms',
-    'crispy_forms_materialize',
+    # 'crispy_forms_materialize',
     'fitness_app',
 ]
 
