@@ -12,6 +12,7 @@ class MakeWorkOutForm(forms.ModelForm):
 
     class Meta:
         model = Post
+        exclude = ("featured_image",)
         fields = "__all__"
         widgets = {
             'content': SummernoteWidget(),
