@@ -2,6 +2,7 @@
 {% load crispy_forms_tags %} 
 {% if user.is_authenticated %}
 <!-- Work Out Content Area -->
+<a class="btn btn-signup right" href="{% url 'edit-workout' post.slug %}">Edit Workout</a>
 <section id="content-detail-section">
   <div class="left">
     <img src=" {{ post.featured_image.url }}" alt="featured-workout-image" />

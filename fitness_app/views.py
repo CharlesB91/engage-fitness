@@ -78,6 +78,13 @@ class PostDetail(View):
             },
         )
 
+class EditWorkOut(View):
+    def get(self, request, slug, *args, **kwargs):
+        queryset = Post.objects
+        post = get_object_or_404(queryset, slug=slug)
+
+        return render(request, "edit-workout.html")
+
 
 class BookingView(View):
 
