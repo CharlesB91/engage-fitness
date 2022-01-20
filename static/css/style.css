@@ -2,7 +2,6 @@
 
 /* Global */
 
-
 html,
 body {
   width: 100%;
@@ -16,9 +15,7 @@ body {
   font-family: "Bebas Neue", cursive;
 }
 
-
 /* Nav Bar */
-
 
 #nav {
   height: 100px;
@@ -40,12 +37,10 @@ body {
   margin-left: 20px;
 }
 
-
 /* Home Image Area  */
 
-
 #box {
-  background-image: url("{% static 'img/home-img.jpg' %}");
+  background-image: url("{% static '/img/home-img.jpg' %}");
   height: 700px;
   background-position: top;
   background-repeat: no-repeat;
@@ -62,21 +57,21 @@ body {
   overflow: hidden;
 }
 
-#btn-home, #btn-home2 {
+#btn-home,
+#btn-home2 {
   top: 50px;
   color: white;
   font-size: 300%;
   background-color: #8ca1a5;
 }
 
-#btn-home:hover, #btn-home2:hover {
+#btn-home:hover,
+#btn-home2:hover {
   background-color: white;
   color: #8ca1a5;
 }
 
-
 /* About Content  */
-
 
 #middle {
   text-align: center;
@@ -104,9 +99,7 @@ body {
   width: 900px;
 }
 
-
 /* Reviews */
-
 
 #reviews {
   text-align: center;
@@ -144,7 +137,6 @@ body {
 
 /* socials */
 
-
 #socials {
   text-align: center;
   height: 250px;
@@ -156,12 +148,10 @@ body {
   color: black;
 }
 
-
 /* Workout Area Content List Page */
 
-
 #workout-area {
-  height: 1700px; 
+  height: 1700px;
   text-align: center;
   overflow: hidden;
 }
@@ -169,7 +159,6 @@ body {
 #workout-area img {
   height: 500px !important;
 }
-
 
 #socials2 {
   overflow: hidden;
@@ -190,10 +179,9 @@ body {
   color: black;
 }
 
-
 .action-btn {
   font-size: 150%;
-  color:  #8ca1a5;
+  color: #8ca1a5;
 }
 
 .action-btn:hover {
@@ -203,7 +191,6 @@ body {
 select {
   display: block !important;
 }
-
 
 /* Add WorkOut Area */
 
@@ -226,7 +213,6 @@ select {
   font-size: 120%;
   width: 200px;
 }
-
 
 /* Content Detail Page */
 
@@ -264,10 +250,8 @@ select {
 
 #comment-center {
   display: flex;
-  justify-content: flex-start
-  
+  justify-content: flex-start;
 }
-
 
 #comment-text-head {
   padding-left: 30px;
@@ -275,14 +259,14 @@ select {
 }
 
 #comment-main {
-  background-color: #B4C6A6;
+  background-color: #b4c6a6;
   width: 500px;
   height: 550px;
   border-radius: 5%;
 }
 
 .comment-header {
-  padding-left:  20px;
+  padding-left: 20px;
   text-decoration: underline;
 }
 
@@ -301,7 +285,6 @@ select {
   padding-left: 20px;
 }
 
-
 /* Booking Page */
 
 #book-head {
@@ -318,7 +301,6 @@ select {
   justify-content: center;
 }
 
-
 /* Success Page */
 
 #success {
@@ -327,9 +309,8 @@ select {
 }
 
 #tick {
-   color: green;
+  color: green;
 }
-
 
 /* Already Booked Page */
 
@@ -344,7 +325,6 @@ select {
 
 /* Responsive Styles */
 
-
 @media screen and (max-width: 1000px) {
   #workout-area {
     height: 2300px;
@@ -353,8 +333,10 @@ select {
     padding-left: 20px;
     padding-right: 20px;
   }
+  .centered {
+    font-size: 600%;
+  }
 }
-
 @media screen and (max-width: 800px) {
   #content-detail-section {
     height: 1200px;
@@ -383,15 +365,66 @@ select {
     padding-left: 10px;
     padding-right: 10px;
   }
-
 }
 
 @media screen and (max-width: 480px) {
+  #home-text {
+    font-size: 220% !important;
+  }
+  .centered {
+    font-size: 450%;
+  }
   #content-detail-section {
     height: 1280px;
   }
   iframe {
     height: 300px;
     width: 300px;
+  }
+  #box {
+    background-image: url("{% static '/img/home-img.jpg' %}");
+    height: 500px;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+  }
+  #middle h1,
+  #reviews h1 {
+    font-size: 280%;
+  }
+  #review_img {
+    height: 200px !important;
+    width: 200px !important;
+  }
+  #btn-home {
+    font-size: 190%;
+    width: 180px;
+    height: 50px;
+  }
+  #reviews {
+    height: 1000px !important;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  #home-text {
+    font-size: 200% !important;
+  }
+  .centered {
+    font-size: 380%;
+  }
+  #btn-home {
+    font-size: 200%;
+    width: 180px;
+    height: 50px;
+  }
+}
+
+@media screen and (max-width: 290px) {
+  #home-text {
+    font-size: 180% !important;
   }
 }
