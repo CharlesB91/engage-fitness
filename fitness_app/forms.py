@@ -5,14 +5,17 @@ from django.utils import timezone
 from django.core.exceptions import ValidationError
 from django.utils import timezone
 from .models import User
-from django.forms import FileInput, CheckboxSelectMultiple, Select
+from django_summernote.widgets import SummernoteWidget
 
 class MakeWorkOutForm(forms.ModelForm):
     author = forms.ModelChoiceField(label="author", queryset=User.objects.all())
 
     class Meta:
         model = Post
-        fields = '__all__'
+        fields = "__all__"
+        widgets = {
+            'content': SummernoteWidget(),
+        }
 
 class CommentForm(forms.ModelForm):
     class Meta:

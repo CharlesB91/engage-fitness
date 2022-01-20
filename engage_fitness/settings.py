@@ -16,6 +16,10 @@ import dj_database_url
 if os.path.isfile('env.py'):
     import env
 
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
@@ -154,6 +158,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 MEDIA_URL = '/media/'
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
@@ -166,7 +171,3 @@ EMAIL_PORT = 587
 EMAIL_HOST_USER = 'engage.fitness.mail@gmail.com' 
 EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
 DEFAULT_FROM_EMAIL = 'engage.fitness.training.1@gmail.com'
-
-
-DATE_INPUT_FORMATS = ['%d-%m-%Y']
-TIME_INPUT_FORMATS = ['%H:%M']

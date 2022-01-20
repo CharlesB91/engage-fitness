@@ -5,13 +5,23 @@ from .forms import CommentForm, AvailabilityForm, MakeWorkOutForm
 from django.views.generic import ListView
 from django.core.mail import send_mail
 from django.utils import timezone
+from cloudinary.forms import cl_init_js_callbacks
 
 
 def home_page(request):
     return render(request, 'index.html')
 
 def createWorkOut(request):
-    form = MakeWorkOutForm
+
+    form = MakeWorkOutForm()
+    if request.method == "POST":
+        form = MakeWorkOutForm(request.POST)
+        if form.is_valid():
+            form.save()
+        else:
+            print("fail")
+    
+
     context = {'form': form}
     return render(request, "add-workout.html", context)
 
