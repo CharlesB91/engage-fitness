@@ -44,8 +44,8 @@ body {
 /* Home Image Area  */
 
 
-/* #box {
-  background-image: url('../static/img/home-img.jpg');
+#box {
+  background-image: url("{% static 'img/home-img.jpg' %}");
   height: 700px;
   background-position: top;
   background-repeat: no-repeat;
@@ -53,7 +53,7 @@ body {
   position: relative;
   overflow: hidden;
   text-align: center;
-} */
+}
 
 .centered {
   color: white;
@@ -200,9 +200,35 @@ body {
   color: goldenrod;
 }
 
+select {
+  display: block !important;
+}
+
+
+/* Add WorkOut Area */
+
+#add-form {
+  width: 800px;
+}
+#add {
+  display: flex;
+  justify-content: center;
+}
+#add h1 {
+  text-align: center;
+}
+#creat-area {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+#creat-area a {
+  font-size: 120%;
+  width: 200px;
+}
+
 
 /* Content Detail Page */
-
 
 #content-detail-section {
   height: 1500px !important;
@@ -275,6 +301,7 @@ body {
   padding-left: 20px;
 }
 
+
 /* Booking Page */
 
 #book-head {
@@ -302,6 +329,7 @@ body {
 #tick {
    color: green;
 }
+
 
 /* Already Booked Page */
 
