@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.views import generic, View
 from .models import Post, Appointment
-from .forms import CommentForm, AvailabilityForm
+from .forms import CommentForm, AvailabilityForm, MakeWorkOutForm
 from django.views.generic import ListView
 from django.core.mail import send_mail
 from django.utils import timezone
@@ -9,6 +9,11 @@ from django.utils import timezone
 
 def home_page(request):
     return render(request, 'index.html')
+
+def createWorkOut(request):
+    form = MakeWorkOutForm
+    context = {'form': form}
+    return render(request, "add-workout.html", context)
 
 
 class PostList(generic.ListView):

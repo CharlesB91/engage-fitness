@@ -1,15 +1,23 @@
-from .models import Comment
+from .models import Comment, Post
 from django import forms
+from django.forms import ModelForm
 from django.utils import timezone
 from django.core.exceptions import ValidationError
 from django.utils import timezone
+from .models import User
+from django.forms import FileInput, CheckboxSelectMultiple, Select
 
+class MakeWorkOutForm(forms.ModelForm):
+    author = forms.ModelChoiceField(label="author", queryset=User.objects.all())
+
+    class Meta:
+        model = Post
+        fields = '__all__'
 
 class CommentForm(forms.ModelForm):
     class Meta:
         model = Comment
         fields = ('body',)
-
 
 class AvailabilityForm(forms.Form):
     name = forms.CharField(max_length=80, required=True)
