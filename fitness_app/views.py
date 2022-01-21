@@ -69,10 +69,6 @@ class createWorkOut(View):
     def get(self, request, *args, **kwargs):
 
         form = MakeWorkOutForm()
-        # if request.method == "POST":
-        #     form = MakeWorkOutForm(request.POST)
-        #     if form.is_valid():
-        #         form.save()
         context = {"form": form}
         return render(request, "add-workout.html", context)
 
@@ -92,6 +88,7 @@ class EditWorkOut(View):
         queryset = Post.objects.get(slug=slug)
         form = EditWorkOutForm(instance=queryset)
         context = {'form': form}
+        
         return render(request, "edit-workout.html", context)
 
     def post(self, request, slug, *args, **kwargs):

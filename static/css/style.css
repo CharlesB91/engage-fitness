@@ -308,9 +308,10 @@ select {
   height: 600px;
 }
 
-.tick {
+#tick {
   color: green;
 }
+
 
 /* Already Booked Page */
 
