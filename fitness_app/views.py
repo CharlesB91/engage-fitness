@@ -11,20 +11,6 @@ from cloudinary.forms import cl_init_js_callbacks
 def home_page(request):
     return render(request, 'index.html')
 
-def createWorkOut(request):
-
-    form = MakeWorkOutForm()
-    if request.method == "POST":
-        form = MakeWorkOutForm(request.POST)
-        if form.is_valid():
-            form.save()
-        else:
-            print("fail")
-    
-
-    context = {'form': form}
-    return render(request, "add-workout.html", context)
-
 
 class PostList(generic.ListView):
     model = Post
@@ -78,6 +64,29 @@ class PostDetail(View):
             },
         )
 
+class createWorkOut(View):
+    
+    def get(self, request, *args, **kwargs):
+
+        form = MakeWorkOutForm()
+        # if request.method == "POST":
+        #     form = MakeWorkOutForm(request.POST)
+        #     if form.is_valid():
+        #         form.save()
+        context = {"form": form}
+        return render(request, "add-workout.html", context)
+
+    def post(self, request, *args, **kwargs):
+
+        form = MakeWorkOutForm()
+        if request.method == "POST":
+            form = MakeWorkOutForm(request.POST)
+            if form.is_valid():
+                form.save()
+
+        return render(request, "done.html")
+
+
 class EditWorkOut(View):
     def get(self, request, slug, *args, **kwargs):
         queryset = Post.objects.get(slug=slug)
@@ -92,11 +101,8 @@ class EditWorkOut(View):
             form = EditWorkOutForm(request.POST, instance=queryset)
             if form.is_valid():
                 form.save()
-            else:
-                print("fail")
 
-        context = {'form': form}
-        return render(request, "edit-workout.html", context)
+        return render(request, "done.html")
 
 
 

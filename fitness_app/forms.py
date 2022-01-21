@@ -7,6 +7,7 @@ from django.utils import timezone
 from .models import User
 from django_summernote.widgets import SummernoteWidget
 
+
 class MakeWorkOutForm(forms.ModelForm):
     # author = forms.ModelChoiceField(label="author", queryset=User.objects.all())
 
@@ -30,10 +31,12 @@ class EditWorkOutForm(forms.ModelForm):
             'content': SummernoteWidget(),
         }
 
+
 class CommentForm(forms.ModelForm):
     class Meta:
         model = Comment
         fields = ('body',)
+
 
 class AvailabilityForm(forms.Form):
     name = forms.CharField(max_length=80, required=True)

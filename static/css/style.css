@@ -194,22 +194,22 @@ select {
 
 /* Add WorkOut Area */
 
-#add-form {
+#add-form, #edit-form {
   width: 800px;
 }
-#add {
+#add, #edit {
   display: flex;
   justify-content: center;
 }
 #add h1 {
   text-align: center;
 }
-#creat-area {
+#creat-area, #edit-area {
   padding: 20px;
   display: flex;
   justify-content: center;
 }
-#creat-area a {
+#creat-area a, #edit-area a {
   font-size: 120%;
   width: 200px;
 }
@@ -303,12 +303,12 @@ select {
 
 /* Success Page */
 
-#success {
+.success {
   text-align: center;
   height: 600px;
 }
 
-#tick {
+.tick {
   color: green;
 }
 

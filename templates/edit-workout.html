@@ -1,9 +1,9 @@
 {% extends "base.html" %} {% block content %} {% load static %} 
 {% load cloudinary %}
 {% if user.is_staff %}
-<h1>Edit Workout</h1>
-<div>
-    <form method="POST" enctype="multipart/form-data">
+<div id="edit">
+    <form id="edit-form" method="POST" enctype="multipart/form-data">
+        <h1>Edit Workout</h1>
         {% csrf_token %}
         {{ form.media }}
         {{form.as_p}} 
