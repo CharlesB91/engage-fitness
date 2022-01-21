@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.views import generic, View
 from .models import Post, Appointment
-from .forms import CommentForm, AvailabilityForm, MakeWorkOutForm
+from .forms import CommentForm, AvailabilityForm, MakeWorkOutForm, EditWorkOutForm
 from django.views.generic import ListView
 from django.core.mail import send_mail
 from django.utils import timezone
@@ -80,10 +80,24 @@ class PostDetail(View):
 
 class EditWorkOut(View):
     def get(self, request, slug, *args, **kwargs):
-        queryset = Post.objects
-        post = get_object_or_404(queryset, slug=slug)
+        queryset = Post.objects.get(slug=slug)
+        form = EditWorkOutForm(instance=queryset)
+        context = {'form': form}
+        return render(request, "edit-workout.html", context)
 
-        return render(request, "edit-workout.html")
+    def post(self, request, slug, *args, **kwargs):
+        queryset = Post.objects.get(slug=slug)
+        form = EditWorkOutForm(instance=queryset)
+        if request.method == "POST":
+            form = EditWorkOutForm(request.POST, instance=queryset)
+            if form.is_valid():
+                form.save()
+            else:
+                print("fail")
+
+        context = {'form': form}
+        return render(request, "edit-workout.html", context)
+
 
 
 class BookingView(View):

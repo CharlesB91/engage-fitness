@@ -9,6 +9,6 @@ urlpatterns = [
     path('success/', views.BookingView.as_view(), name='success'),
     path('unsuccessful/', views.BookingView.as_view(), name='unsuccessful'),
     path('booked/', views.BookingView.as_view(), name='booked'),
-    path('edit-workout/<slug:slug>', views.EditWorkOut.as_view(), name='edit-workout'),
+    path('<slug:slug>', views.EditWorkOut.as_view(), name='edit-workout'),
     path('<slug:slug>/', views.PostDetail.as_view(), name='content-detail'),
 ]

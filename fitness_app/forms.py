@@ -8,7 +8,19 @@ from .models import User
 from django_summernote.widgets import SummernoteWidget
 
 class MakeWorkOutForm(forms.ModelForm):
-    author = forms.ModelChoiceField(label="author", queryset=User.objects.all())
+    # author = forms.ModelChoiceField(label="author", queryset=User.objects.all())
+
+    class Meta:
+        model = Post
+        exclude = ("featured_image",)
+        fields = "__all__"
+        widgets = {
+            'content': SummernoteWidget(),
+        }
+
+
+class EditWorkOutForm(forms.ModelForm):
+    # author = forms.ModelChoiceField(label="author", queryset=User.objects.all())
 
     class Meta:
         model = Post
