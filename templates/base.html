@@ -36,7 +36,49 @@
   position: relative;
   overflow: hidden;
   text-align: center;
-} 
+}
+@media screen and (max-width: 480px) {
+  #home-text {
+    font-size: 200% !important;
+  }
+  .centered {
+    font-size: 450%;
+  }
+  #content-detail-section {
+    height: 1280px;
+  }
+  iframe {
+    height: 300px;
+    width: 300px;
+  }
+  #box {
+    background-image: url("{% static '/img/home-img.jpg' %}");
+    height: 500px;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+  }
+  #middle h1,
+  #reviews h1 {
+    font-size: 280%;
+  }
+  #review_img {
+    height: 200px !important;
+    width: 200px !important;
+  }
+  #btn-home {
+    font-size: 190%;
+    width: 180px;
+    height: 50px;
+  }
+  #reviews {
+    height: 1000px !important;
+  }
+}
+
   </style>
   <body>
     <!-- Nav Bar -->
@@ -50,8 +92,8 @@
           ></a>
           <ul class="right hide-on-med-and-down" id="nav-link">
             {% if user.is_authenticated %}
-            <li><a href="/home">Work Outs</a></li>
-            <li><a href="/availability">Book 1-1 Session</a></li>
+            <li><a href="{% url 'content' %}">Work Outs</a></li>
+            <li><a href="{% url 'availability' %}">Book 1-1 Session</a></li>
             <li><a href="/#middle">What We Do</a></li>
             <li><a href="/#reviews">Reviews</a></li>
             <li><a href="/#socials">Socials</a></li>
@@ -69,8 +111,8 @@
 
       <ul class="sidenav" id="mobile-demo">
         {% if user.is_authenticated %}
-        <li><a href="/home">Work Outs</a></li>
-        <li><a href="/availability">Book 1-1 Session</a></li>
+        <li><a href="{% url 'content' %}">Work Outs</a></li>
+        <li><a href="{% url 'availability' %}">Book 1-1 Session</a></li>
         <li><a href="/#middle">What We Do</a></li>
         <li><a href="/#reviews">Reviews</a></li>
         <li><a href="/#socials">Socials</a></li>

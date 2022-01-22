@@ -5,7 +5,7 @@
   <h1 class="centered">TOMORROW IS NOW</h1>
   {% if user.is_authenticated %}
   <a
-    href="/home"
+    href="{% url 'content' %}"
     class="waves-effect waves-light btn-large"
     id="btn-home"
     aria-label="work-outs-page"

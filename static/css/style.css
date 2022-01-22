@@ -204,13 +204,13 @@ select {
 #add h1 {
   text-align: center;
 }
-#creat-area, #edit-area {
+#create-area, #edit-area {
   padding: 20px;
   display: flex;
-  justify-content: center space-around;
+  justify-content: center;
   
 }
-#creat-area a, #edit-area a {
+#create-area a, #edit-area a {
   font-size: 120%;
   width: 200px;
 }
@@ -338,7 +338,14 @@ select {
   .centered {
     font-size: 600%;
   }
+  #workout-area img {
+  height: 300px !important;
 }
+#workout-area {
+    height: 1800px;
+  }
+}
+
 @media screen and (max-width: 800px) {
   #content-detail-section {
     height: 1200px;
@@ -354,24 +361,27 @@ select {
     font-size: 600%;
   }
   #home-text {
-    font-size: 250% !important;
+    font-size: 230% !important;
   }
   #main_carousel,
   #reviews {
     height: 850px !important;
   }
   #workout-area {
-    height: 4500px;
+    height: 3400px;
   }
   #content-info {
     padding-left: 10px;
     padding-right: 10px;
   }
+  #workout-area img {
+  height: 300px !important;
+}
 }
 
 @media screen and (max-width: 480px) {
   #home-text {
-    font-size: 220% !important;
+    font-size: 200% !important;
   }
   .centered {
     font-size: 450%;
@@ -427,6 +437,12 @@ select {
 
 @media screen and (max-width: 290px) {
   #home-text {
-    font-size: 180% !important;
+    font-size: 170% !important;
+  }
+  #workout-area img {
+  height: 250px !important;
+}
+#workout-area {
+    height: 3200px;
   }
 }
