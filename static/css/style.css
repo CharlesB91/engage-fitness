@@ -207,7 +207,8 @@ select {
 #creat-area, #edit-area {
   padding: 20px;
   display: flex;
-  justify-content: center;
+  justify-content: center space-around;
+  
 }
 #creat-area a, #edit-area a {
   font-size: 120%;
