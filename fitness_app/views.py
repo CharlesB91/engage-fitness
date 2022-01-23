@@ -80,7 +80,7 @@ class createWorkOut(View):
             if form.is_valid():
                 form.save()
 
-        return render(request, "done.html")
+        return render(request, "add-workout.html")
 
 
 class EditWorkOut(View):
@@ -99,7 +99,7 @@ class EditWorkOut(View):
             if form.is_valid():
                 form.save()
 
-        return render(request, "done.html")
+        return render(request, "edit-workout.html")
 
 
 

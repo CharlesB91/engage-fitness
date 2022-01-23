@@ -26,18 +26,6 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   </head>
-  <style>
-    #box {
-  background-image: url("{% static '/img/home-img.jpg' %}");
-  height: 700px;
-  background-position: top;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-  overflow: hidden;
-  text-align: center;
-}
-  </style>
   <body>
     <!-- Nav Bar -->
     <header>
@@ -50,7 +38,7 @@
           ></a>
           <ul class="right hide-on-med-and-down" id="nav-link">
             {% if user.is_authenticated %}
-            <li><a href="{% url 'content' %}">Work Outs</a></li>
+            <li><a href="{% url 'content-list' %}">Work Outs</a></li>
             <li><a href="{% url 'availability' %}">Book 1-1 Session</a></li>
             <li><a href="/#middle">What We Do</a></li>
             <li><a href="/#reviews">Reviews</a></li>
@@ -69,7 +57,7 @@
 
       <ul class="sidenav" id="mobile-demo">
         {% if user.is_authenticated %}
-        <li><a href="{% url 'content' %}">Work Outs</a></li>
+        <li><a href="{% url 'content-list' %}">Work Outs</a></li>
         <li><a href="{% url 'availability' %}">Book 1-1 Session</a></li>
         <li><a href="/#middle">What We Do</a></li>
         <li><a href="/#reviews">Reviews</a></li>

@@ -30,8 +30,6 @@ DEBUG = False
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
 
-# X_FRAME_OPTIONS = 'SAMEORIGIN'
-
 ALLOWED_HOSTS = ['engagefitness.herokuapp.com', 'localhost']
 
 
