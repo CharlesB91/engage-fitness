@@ -381,10 +381,8 @@ select {
 #content-detail-section {
   height: 2300px !important;
 }
-#btn-home {
-    font-size: 150%;
-    width: 120px;
-    height: 50px;
+#btn-home, #btn-home2 {
+    font-size: 120%;
   }
 }
 
@@ -409,11 +407,6 @@ select {
   #review_img {
     height: 200px !important;
     width: 200px !important;
-  }
-  #btn-home {
-    font-size: 190%;
-    width: 180px;
-    height: 50px;
   }
   #reviews {
     height: 1000px !important;
