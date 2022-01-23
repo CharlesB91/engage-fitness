@@ -39,17 +39,6 @@ body {
 
 /* Home Image Area  */
 
-#box {
-  background-image: url("../img/home-img.jpg");
-  height: 700px;
-  background-position: top;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-  overflow: hidden;
-  text-align: center;
-}
-
 .centered {
   color: white;
   font-size: 1000%;
@@ -407,16 +396,6 @@ select {
   iframe {
     height: 300px;
     width: 300px;
-  }
-  #box {
-    background-image: url("../img/home-img.jpg");
-    height: 500px;
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    overflow: hidden;
-    text-align: center;
   }
   #middle h1,
   #reviews h1 {
