@@ -1,6 +1,6 @@
 from . import views
 from django.urls import path
-# from django.views.i18n import JavaScriptCatalog
+
 
 urlpatterns = [
     path('content-list/', views.PostList.as_view(), name='content-list'),
