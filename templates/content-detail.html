@@ -10,11 +10,13 @@
 {% endif %}
 
 <section id="content-detail-section">
-  <div class="left">
-    <img src=" {{ post.featured_image.url }}" alt="featured-workout-image" />
+  <div id="flex-content">
+    <div class="left">
+      <img src=" {{ post.featured_image.url }}" alt="featured-workout-image" />
+    </div>
+    <div><h1 class="detail-header">{{ post.title }}</h1></div>
+    <h4 class="detail-header">{{ post.author }} | {{ post.created_on }}</h4>
   </div>
-  <h1 class="detail-header">{{ post.title }}</h1>
-  <h4 class="detail-header">{{ post.author }} | {{ post.created_on }}</h4>
   <div id="content-area">
     <p id="content-content">{{ post.content | safe }}</p>
   </div>
@@ -33,7 +35,7 @@
         {% endfor %}
       </div>
     </div>
-    <div class="row" id="comment-row">
+    <div id="comment-row">
       {% if commented %}
       <div role="alert">Your comment is awaiting approval</div>
       <div class="input-field">

@@ -218,7 +218,7 @@ select {
 /* Content Detail Page */
 
 #content-detail-section {
-  height: 1500px !important;
+  height: 2000px !important;
   padding-left: 10px;
 }
 
@@ -346,14 +346,16 @@ select {
   }
 }
 
-@media screen and (max-width: 800px) {
-  #content-detail-section {
-    height: 1200px;
-  }
+@media screen and (max-width: 700px) {
   iframe {
-    height: 400px;
-    width: 400px;
+    height: 450px;
+    width: 450px;
   }
+  #flex-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 }
 
 @media screen and (max-width: 600px) {
@@ -376,6 +378,19 @@ select {
   }
   #workout-area img {
   height: 300px !important;
+}
+#comment-center {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+}
+#comment-main {
+  width: 300px;
+  display: flex;
+}
+#content-detail-section {
+  height: 2300px !important;
 }
 }
 
@@ -419,6 +434,16 @@ select {
   #reviews {
     height: 1000px !important;
   }
+  #content-detail-section img {
+  margin-top: 0px;
+  margin-left: 0px;
+  height: 300px !important;
+  width: 300px !important;
+}
+
+#content-detail-section {
+  padding-left: 0px
+}
 }
 
 @media screen and (max-width: 320px) {
