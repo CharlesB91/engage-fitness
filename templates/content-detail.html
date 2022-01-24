@@ -5,7 +5,7 @@
 {% if user.is_staff %}
 <div id="edit-area">
   <a class="btn btn-signup right" href="{% url 'edit-workout' post.slug %}">Edit Workout</a>
-  <a class="btn btn-signup red darken-4" href="/add-workout">Delete Workout</a>
+  <a class="btn btn-signup red darken-4" href="{% url 'delete-workout' post.slug %}">Delete Workout</a>
 </div>
 {% endif %}
 

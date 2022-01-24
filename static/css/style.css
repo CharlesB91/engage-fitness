@@ -183,10 +183,10 @@ select {
 
 /* Add WorkOut Area */
 
-#add-form, #edit-form {
+#add-form, #edit-form, #delete-form {
   width: 800px;
 }
-#add, #edit {
+#add, #edit, #delete {
   display: flex;
   justify-content: center;
 }

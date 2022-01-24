@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, HttpResponse
 from django.views import generic, View
 from .models import Post, Appointment
 from .forms import CommentForm, AvailabilityForm, MakeWorkOutForm, EditWorkOutForm
@@ -100,6 +100,21 @@ class EditWorkOut(View):
                 form.save()
 
         return render(request, "edit-workout.html")
+
+class DeleteWorkOut(View):
+
+    def get(self, request, slug, *args, **kwargs):
+        queryset = Post.objects.get(slug=slug)
+
+        return render(request, "delete.html")
+
+    def post(self, request, slug, *args, **kwargs):
+        queryset = Post.objects.get(slug=slug)
+        if request.method == "POST":
+            queryset.delete()
+            return HttpResponse("Deleted")
+
+        return render(request, "delete.html")
 
 
 
