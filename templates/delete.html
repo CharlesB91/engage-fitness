@@ -5,9 +5,9 @@
         {% csrf_token %}
         <h1>Delete WorkOut</h1>
         <h4>Are You Sure You Wish To Delete</h4>
-        <a href="{% url 'content-list' %}">Cancel Request</a>
+        <a class="btn btn-signup green" href="{% url 'content-list' %}">Cancel</a>
 
-        <input type="submit" class="btn btn-signup" name="Delete Workout">
+        <input type="submit" class="btn btn-signup red darken-4" name="Delete Workout">
     </form>
     </div>
 {% endif %}
