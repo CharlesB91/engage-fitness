@@ -6,6 +6,7 @@ from django.views.generic import ListView
 from django.core.mail import send_mail
 from django.utils import timezone
 from cloudinary.forms import cl_init_js_callbacks
+from django.core.exceptions import ValidationError
 
 
 def home_page(request):
@@ -117,7 +118,6 @@ class DeleteWorkOut(View):
         return render(request, "delete.html")
 
 
-
 class BookingView(View):
 
     def get(self, request, *args, **kwargs):
@@ -129,9 +129,6 @@ class BookingView(View):
 
         if form.is_valid():
             data = form. cleaned_data
-            print(timezone.now())
-        else:
-            return render(request, "unsuccessful.html")
 
         bookingList = Appointment.objects.filter(start_date__lt=data
                                                  ['end_date'],
