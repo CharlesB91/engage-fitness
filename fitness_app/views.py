@@ -129,6 +129,9 @@ class BookingView(View):
 
         if form.is_valid():
             data = form. cleaned_data
+        
+        if data["start_date"] < timezone.now():
+            return render(request, "unsuccessful.html")
 
         bookingList = Appointment.objects.filter(start_date__lt=data
                                                  ['end_date'],
