@@ -80,7 +80,7 @@ class createWorkOut(View):
             if form.is_valid():
                 form.save()
 
-        return render(request, "add-workout.html")
+        return render(request, "success-add.html")
 
 
 class EditWorkOut(View):
@@ -99,7 +99,7 @@ class EditWorkOut(View):
             if form.is_valid():
                 form.save()
 
-        return render(request, "edit-workout.html")
+        return render(request, "success-edit.html")
 
 class DeleteWorkOut(View):
 
@@ -112,7 +112,7 @@ class DeleteWorkOut(View):
         queryset = Post.objects.get(slug=slug)
         if request.method == "POST":
             queryset.delete()
-            return HttpResponse("Deleted")
+            return render(request, "success-delete.html")
 
         return render(request, "delete.html")
 
