@@ -337,6 +337,12 @@ select {
   }
 }
 
+@media screen and (max-width: 800px) {
+  #add-form, #edit-form, #delete-form {
+    width: 600px;
+  }
+}
+
 @media screen and (max-width: 700px) {
   iframe {
     height: 450px;
@@ -374,7 +380,6 @@ select {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  text-align: center;
 }
 #comment-main {
   width: 300px;
@@ -386,6 +391,12 @@ select {
 #btn-home, #btn-home2 {
     font-size: 200%;
   }
+#add-form, #edit-form, #delete-form {
+    width: 490px;
+  }
+#comment-row {
+  padding-left: 0;
+}
 }
 
 @media screen and (max-width: 480px) {
@@ -423,6 +434,9 @@ select {
 #content-detail-section {
   padding-left: 0px
 }
+#add-form, #edit-form, #delete-form {
+  width: 300px;
+}
 }
 
 @media screen and (max-width: 320px) {
@@ -443,5 +457,8 @@ select {
 }
 #workout-area {
     height: 3200px;
+  }
+  #add-form, #edit-form, #delete-form {
+    width: 270px;
   }
 }
