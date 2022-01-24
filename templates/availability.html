@@ -71,27 +71,52 @@
         {% endif %}
       </ul>
     </header>
-    {% block content %}
-        {% if user.is_authenticated %}
-        <h1 id="book-head">Book Your 1-2-1 Session</h1>
-          <div id="appointment-area">
-            <form class="form-book" action="" method="POST" id="datetimepicker1"> 
-                {% csrf_token %}
-                <label for="id_name">Name</label>
-                <input type="text" name="name" maxlength="80" required_id="id_name" required>
-                <label for="id_email">Email</label>
-                <input type="email" required_id="id_email" name="email" max_length="254" required>
-                <label for="id_start_date">Start Date & Time</label>
-                <input type="text" name="start_date" required_id="id_start_date" placeholder="Select Date & Time" id="datetime" required/>
-                <label for="id_end_date">End Date & Time</label>
-                <input type="text" name="end_date" required_id="id_end_date" placeholder="Select Date & Time" class="datepicker" id="datetime2" required>
-                <button class="btn btn-signup red green" type="submit">Book</button>
-            </form>
-        </div>
-        {% else %}
-        <h1>Please Log In</h1>
-        {% endif %}
-    {% endblock content %}
+    {% block content %} {% if user.is_authenticated %}
+    <h1 id="book-head">Book Your 1-2-1 Session</h1>
+    <div id="appointment-area">
+      <form class="form-book" action="" method="POST" id="datetimepicker1">
+        {% csrf_token %}
+        <label for="id_name">Name</label>
+        <input
+          type="text"
+          name="name"
+          maxlength="80"
+          required_id="id_name"
+          required
+        />
+        <label for="id_email">Email</label>
+        <input
+          type="email"
+          required_id="id_email"
+          name="email"
+          max_length="254"
+          required
+        />
+        <label for="id_start_date">Start Date & Time</label>
+        <input
+          type="text"
+          name="start_date"
+          required_id="id_start_date"
+          placeholder="Select Date & Time"
+          id="datetime"
+          required
+        />
+        <label for="id_end_date">End Date & Time</label>
+        <input
+          type="text"
+          name="end_date"
+          required_id="id_end_date"
+          placeholder="Select Date & Time"
+          class="datepicker"
+          id="datetime2"
+          required
+        />
+        <button class="btn btn-signup red green" type="submit">Book</button>
+      </form>
+    </div>
+    {% else %}
+    <h1>Please Log In</h1>
+    {% endif %} {% endblock content %}
     <!-- Social Media Area -->
     <footer id="socials">
       <h1>Socials</h1>
@@ -118,7 +143,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="{% static 'js/index.js' %}"></script>
     <script>
-       var MaterialDateTimePicker = {
+      var MaterialDateTimePicker = {
         control: null,
         dateRange: null,
         pickerOptions: null,

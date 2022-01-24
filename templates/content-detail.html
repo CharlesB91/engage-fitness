@@ -1,11 +1,16 @@
 {% extends "base.html" %} {% block content %} {% load static %} 
-{% load crispy_forms_tags %} 
-{% if user.is_authenticated %}
+{% load crispy_forms_tags %} {% if user.is_authenticated %}
 <!-- Work Out Content Area -->
 {% if user.is_staff %}
 <div id="edit-area">
-  <a class="btn btn-signup right" href="{% url 'edit-workout' post.slug %}">Edit Workout</a>
-  <a class="btn btn-signup red darken-4" href="{% url 'delete-workout' post.slug %}">Delete Workout</a>
+  <a class="btn btn-signup right" href="{% url 'edit-workout' post.slug %}"
+    >Edit Workout</a
+  >
+  <a
+    class="btn btn-signup red darken-4"
+    href="{% url 'delete-workout' post.slug %}"
+    >Delete Workout</a
+  >
 </div>
 {% endif %}
 

@@ -1,10 +1,11 @@
 {% extends "base.html" %} {% block content %} {% load static %}
 
 <!-- Work Out Content List -->
-{% if user.is_authenticated %}
-{% if user.is_staff %}
+{% if user.is_authenticated %} {% if user.is_staff %}
 <div id="create-area">
-  <a class="btn btn-signup green darken-1" href="{% url 'add-workout' %}">Create Workout</a>
+  <a class="btn btn-signup green darken-1" href="{% url 'add-workout' %}"
+    >Create Workout</a
+  >
 </div>
 {% endif %}
 <section id="workout-area">
@@ -15,12 +16,12 @@
       <div class="card card-content-list">
         <div class="card-image">
           {% if "placeholder" in post.featured_image.url %}
-          <img src="{% static 'img/workout.jpg' %}">
+          <img src="{% static 'img/workout.jpg' %}" />
           {% else %}
           <img
-          src="{{ post.featured_image.url}}"
-          alt="featured-workout-image"
-        />
+            src="{{ post.featured_image.url}}"
+            alt="featured-workout-image"
+          />
           {% endif %}
         </div>
         <div class="card-content">
