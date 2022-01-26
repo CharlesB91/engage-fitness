@@ -394,6 +394,9 @@ select {
 #comment-row {
   padding-left: 0;
 }
+.inform {
+  font-size: 50%;
+}
 }
 
 @media screen and (max-width: 480px) {

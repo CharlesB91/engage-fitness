@@ -1,7 +1,7 @@
 {% extends "base.html" %} {% block content %} {% load static %} 
 {% if user.is_authenticated %}
   <div class="success">
-    <h1>Appointment Confirmed <i id="tick" class="far fa-check-circle"></i></h1>
+    <h1 class="inform">Appointment Confirmed <i id="tick" class="far fa-check-circle"></i></h1>
     <h4>
       Thanks <b>{{booking.name}}</b> You Will Now Receive An Email With Booking
       Confirmation & Zoom Link
