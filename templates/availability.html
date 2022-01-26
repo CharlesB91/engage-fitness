@@ -26,48 +26,46 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   </head>
   <body>
-    <!-- Nav Bar -->
     <header>
       <!-- Nav Bar -->
       <nav id="nav">
         <div class="nav-wrapper">
-          <a href="/" class="brand-logo" id="home-text">Engage Fitness</a>
-          <a href="#" data-target="mobile-demo" class="sidenav-trigger"
+          <a href="/" class="brand-logo" id="home-text" aria-label="home-button">Engage Fitness</a>
+          <a href="#" data-target="mobile-demo" class="sidenav-trigger" aria-label="expand-options"
             ><i class="fas fa-bars"></i
           ></a>
           <ul class="right hide-on-med-and-down" id="nav-link">
             {% if user.is_authenticated %}
-            <li><a href="{% url 'content-list' %}">Work Outs</a></li>
-            <li><a href="{% url 'availability' %}">Book 1-1 Session</a></li>
-            <li><a href="/#middle">What We Do</a></li>
-            <li><a href="/#reviews">Reviews</a></li>
-            <li><a href="/#socials">Socials</a></li>
-            <li><a href="{% url 'account_logout' %}">Log Out</a></li>
+            <li><a href="{% url 'content-list' %}" aria-label="workouts">Work Outs</a></li>
+            <li><a href="{% url 'availability' %}" aria-label="book-PT-121">Book 1-1 Session</a></li>
+            <li><a href="/#middle" aria-label="what-we-do-content">What We Do</a></li>
+            <li><a href="/#reviews" aria-label="customer-reviews-content">Reviews</a></li>
+            <li><a href="/#socials" aria-label="social-links">Socials</a></li>
+            <li><a href="{% url 'account_logout' %}" aria-label="log-out-button">Log Out</a></li>
             {% else %}
-            <li><a href="{% url 'account_login' %}">Log In</a></li>
-            <li><a href="{% url 'account_signup' %}">Sign Up</a></li>
-            <li><a href="/#middle">What We Do</a></li>
-            <li><a href="/#reviews">Reviews</a></li>
-            <li><a href="/#socials">Socials</a></li>
+            <li><a href="{% url 'account_login' %}" aria-label="log-in">Log In</a></li>
+            <li><a href="{% url 'account_signup' %}" aria-label="sign-up">Sign Up</a></li>
+            <li><a href="/#middle" aria-label="what-we-do-content">What We Do</a></li>
+            <li><a href="/#reviews" aria-label="customer-reviews-content">Reviews</a></li>
+            <li><a href="/#socials" aria-label="social-links">Socials</a></li>
             {% endif %}
           </ul>
         </div>
       </nav>
-
       <ul class="sidenav" id="mobile-demo">
         {% if user.is_authenticated %}
-        <li><a href="{% url 'content-list' %}">Work Outs</a></li>
-        <li><a href="{% url 'availability' %}">Book 1-1 Session</a></li>
-        <li><a href="/#middle">What We Do</a></li>
-        <li><a href="/#reviews">Reviews</a></li>
-        <li><a href="/#socials">Socials</a></li>
-        <li><a href="{% url 'account_logout' %}">Log Out</a></li>
+        <li><a href="{% url 'content-list' %}" aria-label="workouts">Work Outs</a></li>
+        <li><a href="{% url 'availability' %}" aria-label="book-PT-121">Book 1-1 Session</a></li>
+        <li><a href="/#middle" aria-label="what-we-do-content">What We Do</a></li>
+        <li><a href="/#reviews" aria-label="customer-reviews-content">Reviews</a></li>
+        <li><a href="/#socials"  aria-label="social-links">Socials</a></li>
+        <li><a href="{% url 'account_logout' %}" aria-label="log-out-button">Log Out</a></li>
         {% else %}
-        <li><a href="{% url 'account_login' %}">Log In</a></li>
-        <li><a href="{% url 'account_signup' %}">Sign Up</a></li>
-        <li><a href="/#middle">What We Do</a></li>
-        <li><a href="/#reviews">Reviews</a></li>
-        <li><a href="/#socials">Socials</a></li>
+        <li><a href="{% url 'account_login' %}" aria-label="log-in">Log In</a></li>
+        <li><a href="{% url 'account_signup' %}" aria-label="sign-up">Sign Up</a></li>
+        <li><a href="/#middle" aria-label="what-we-do-content">What We Do</a></li>
+        <li><a href="/#reviews" aria-label="customer-reviews-content">Reviews</a></li>
+        <li><a href="/#socials" aria-label="social-links">Socials</a></li>
         {% endif %}
       </ul>
     </header>
@@ -111,7 +109,7 @@
           id="datetime2"
           required
         />
-        <button class="btn btn-signup red green" type="submit">Book</button>
+        <button class="btn btn-signup red green" type="submit" aria-label="submit-book">Book</button>
       </form>
     </div>
     {% else %}
