@@ -3,17 +3,16 @@
 <!-- Work Out Content Area -->
 {% if user.is_staff %}
 <div id="edit-area">
-  <a class="btn btn-signup right" href="{% url 'edit-workout' post.slug %}"
+  <a class="btn btn-signup right" href="{% url 'edit-workout' post.slug %}" aria-label="edit-workout"
     >Edit Workout</a
   >
   <a
     class="btn btn-signup red darken-4"
-    href="{% url 'delete-workout' post.slug %}"
+    href="{% url 'delete-workout' post.slug %}" aria-label="delete-workout"
     >Delete Workout</a
   >
 </div>
 {% endif %}
-
 <section id="content-detail-section">
   <div id="flex-content">
     <div class="left">
@@ -49,7 +48,7 @@
         <p>Posting as: {{ user.username }}</p>
         <form method="post" id="comment-form">
           {{ comment_form | crispy }} {% csrf_token %}
-          <button type="submit" class="waves-effect waves-light btn">
+          <button type="submit" class="waves-effect waves-light btn" aria-label="submit-comment">
             Submit
           </button>
         </form>

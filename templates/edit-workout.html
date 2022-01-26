@@ -4,7 +4,7 @@
   <form id="edit-form" method="POST" enctype="multipart/form-data">
     <h1>Edit Workout</h1>
     {% csrf_token %} {{ form.media }} {{form.as_p}}
-    <input type="submit" class="btn btn-signup" name="submit" />
+    <input type="submit" class="btn btn-signup" name="submit" aria-label="confirm-edit" />
   </form>
 </div>
 {% endif %} {% endblock content %}

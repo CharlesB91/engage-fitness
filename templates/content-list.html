@@ -3,7 +3,7 @@
 <!-- Work Out Content List -->
 {% if user.is_authenticated %} {% if user.is_staff %}
 <div id="create-area">
-  <a class="btn btn-signup green darken-1" href="{% url 'add-workout' %}"
+  <a class="btn btn-signup green darken-1" href="{% url 'add-workout' %}" aria-label="add-workout"
     >Create Workout</a
   >
 </div>
@@ -16,7 +16,7 @@
       <div class="card card-content-list">
         <div class="card-image">
           {% if "placeholder" in post.featured_image.url %}
-          <img src="{% static 'img/workout.jpg' %}" />
+          <img src="{% static 'img/workout.jpg' %}" alt="featured-workout-image"/>
           {% else %}
           <img
             src="{{ post.featured_image.url}}"
@@ -41,10 +41,10 @@
     <ul class="pagination justify-content-center">
       {% if page_obj.has_previous %}
       <li>
-        <a href="?page={{ page_obj.previous_page_number }}">&laquo; PREV </a>
+        <a href="?page={{ page_obj.previous_page_number }}" aria-label="previous-page">&laquo; PREV </a>
       </li>
       {% endif %} {% if page_obj.has_next %}
-      <li><a href="?page={{ page_obj.next_page_number }}"> NEXT &raquo;</a></li>
+      <li><a href="?page={{ page_obj.next_page_number }}" aria-label="next-page"> NEXT &raquo;</a></li>
 
       {% endif %}
     </ul>
