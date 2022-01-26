@@ -149,14 +149,14 @@ class BookingView(View):
             name_user = data["name"]
             start_email = data["start_date"]
             email_user = data["email"]
-            # send_mail("Virtual PT Session", f"Thanks {name_user} For Booking" +
-            #           "Your Appointment with us.\n" +
-            #           "Please join the following zoom link on" +
-            #           f"{start_email}\n" +
-            #           "https://us04web.zoom.us/j/8339571591?pwd=" +
-            #           "dG9MQy9nUWN6a0F2dUo4L04rQkxPQT09",
-            #           "engage.fitness.training.1@gmail.com", [email_user],
-            #           fail_silently=False)
+            send_mail("Virtual PT Session", f"Thanks {name_user} For Booking" +
+                      "Your Appointment with us.\n" +
+                      "Please join the following zoom link on" +
+                      f"{start_email}\n" +
+                      "https://us04web.zoom.us/j/8339571591?pwd=" +
+                      "dG9MQy9nUWN6a0F2dUo4L04rQkxPQT09",
+                      "engage.fitness.training.1@gmail.com", [email_user],
+                      fail_silently=False)
             return render(request, "success.html", {
                 "booking": booking
             },)
