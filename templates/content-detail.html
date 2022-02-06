@@ -16,7 +16,14 @@
 <section id="content-detail-section">
   <div id="flex-content">
     <div class="left">
-      <img src=" {{ post.featured_image.url }}" alt="featured-workout-image" />
+      {% if "placeholder" in post.featured_image.url %}
+      <img src="{% static 'img/workout.jpg' %}" alt="featured-workout-image"/>
+      {% else %}
+      <img
+        src="{{ post.featured_image.url}}"
+        alt="featured-workout-image"
+      />
+      {% endif %}
     </div>
     <div><h1 class="detail-header">{{ post.title }}</h1></div>
     <h4 class="detail-header">{{ post.author }} | {{ post.created_on }}</h4>
