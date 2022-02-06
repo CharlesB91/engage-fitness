@@ -1,12 +1,11 @@
-from django.shortcuts import render, get_object_or_404, HttpResponse
+from django.shortcuts import render, get_object_or_404
 from django.views import generic, View
 from .models import Post, Appointment
-from .forms import CommentForm, AvailabilityForm, MakeWorkOutForm, EditWorkOutForm
+from .forms import CommentForm, AvailabilityForm
+from .forms import MakeWorkOutForm, EditWorkOutForm
 from django.views.generic import ListView
 from django.core.mail import send_mail
 from django.utils import timezone
-from cloudinary.forms import cl_init_js_callbacks
-from django.core.exceptions import ValidationError
 
 
 def home_page(request):
@@ -65,8 +64,9 @@ class PostDetail(View):
             },
         )
 
+
 class createWorkOut(View):
-    
+
     def get(self, request, *args, **kwargs):
 
         form = MakeWorkOutForm()
@@ -89,7 +89,7 @@ class EditWorkOut(View):
         queryset = Post.objects.get(slug=slug)
         form = EditWorkOutForm(instance=queryset)
         context = {'form': form}
-        
+
         return render(request, "edit-workout.html", context)
 
     def post(self, request, slug, *args, **kwargs):
@@ -101,6 +101,7 @@ class EditWorkOut(View):
                 form.save()
 
         return render(request, "success-edit.html")
+
 
 class DeleteWorkOut(View):
 
@@ -129,7 +130,7 @@ class BookingView(View):
 
         if form.is_valid():
             data = form. cleaned_data
-        
+
         if data["start_date"] < timezone.now():
             return render(request, "unsuccessful.html")
 
@@ -146,11 +147,11 @@ class BookingView(View):
                 end_date=data["end_date"],
                 )
             booking.save()
-            # name_user = data["name"]
-            # start_email = data["start_date"]
-            # email_user = data["email"]
-            # send_mail("Virtual PT Session", f"Thanks {name_user} For Booking" +
-            #           "Your Appointment with us.\n" +
+            name_user = data["name"]
+            start_email = data["start_date"]
+            email_user = data["email"]
+            # send_mail("Virtual PT Session", f"Thanks {name_user} For" +
+            #           "Booking Your Appointment with us.\n" +
             #           "Please join the following zoom link on" +
             #           f"{start_email}\n" +
             #           "https://us04web.zoom.us/j/8339571591?pwd=" +
