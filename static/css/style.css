@@ -395,7 +395,11 @@ select {
   padding-left: 0;
 }
 .inform {
-  font-size: 50%;
+  font-size: 200%;
+}
+.form-book {
+  width: 300px;
+  height: 300px;
 }
 }
 
