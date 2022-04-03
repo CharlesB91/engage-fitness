@@ -207,7 +207,7 @@ select {
 /* Content Detail Page */
 
 #content-detail-section {
-  height: 2000px !important;
+  height: 1700px !important;
   padding-left: 10px;
 }
 
@@ -225,6 +225,7 @@ select {
 #content-area {
   padding-left: 30px !important;
   padding-right: 30px !important;
+  margin-bottom: 100px;
 }
 
 #content-content {
@@ -250,7 +251,7 @@ select {
 
 #comment-main {
   background-color: #b4c6a6;
-  width: 500px;
+  width: 800px;
   height: 550px;
   border-radius: 5%;
 }
