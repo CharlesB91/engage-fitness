@@ -288,6 +288,7 @@ select {
 }
 
 #appointment-area {
+  height: 400px;
   display: flex;
   justify-content: center;
 }
@@ -433,6 +434,9 @@ select {
   #workout-area img {
     width: 450px;
   }
+  #book-head {
+    font-size: 300%;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -478,7 +482,7 @@ select {
 }
 }
 
-@media screen and (max-width: 370px) {
+@media screen and (max-width: 375px) {
   .centered {
     font-size: 400%;
   }
@@ -518,5 +522,12 @@ select {
   }
   #comment-main {
     width: 270px !important;
+  }
+  #book-head {
+    font-size: 200% !important;
+  }
+  #appointment-area {
+    width: 250px !important;
+    padding-left: 10px;
   }
 }
