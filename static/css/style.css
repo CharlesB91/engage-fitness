@@ -317,7 +317,15 @@ select {
 
 /* Responsive Styles */
 
+@media screen and (max-width: 1050px) {
+  #home-text {
+    font-size: 300% !important;
+  }
+
+}
+
 @media screen and (max-width: 1000px) {
+
   #workout-area {
     height: 2300px;
   }
@@ -445,6 +453,12 @@ select {
 }
 }
 
+@media screen and (max-width: 370px) {
+  .centered {
+    font-size: 400%;
+  }
+}
+
 @media screen and (max-width: 320px) {
   #home-text {
     font-size: 200% !important;
@@ -455,6 +469,9 @@ select {
 }
 
 @media screen and (max-width: 290px) {
+  .centered {
+    font-size: 300%;
+  }
   #home-text {
     font-size: 170% !important;
   }
