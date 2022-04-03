@@ -321,6 +321,9 @@ select {
   #home-text {
     font-size: 300% !important;
   }
+  #workout-area img {
+    height: 450px !important
+  }
 
 }
 
@@ -413,6 +416,12 @@ select {
 }
 }
 
+@media screen and (max-width: 550px) {
+  #workout-area img {
+    width: 450px;
+  }
+}
+
 @media screen and (max-width: 480px) {
   #home-text {
     font-size: 200% !important;
@@ -451,6 +460,9 @@ select {
 #add-form, #edit-form, #delete-form {
   width: 300px;
 }
+#workout-area img {
+  width: 380px;
+}
 }
 
 @media screen and (max-width: 370px) {
@@ -477,11 +489,15 @@ select {
   }
   #workout-area img {
   height: 250px !important;
+  width: 250px;
 }
 #workout-area {
     height: 3200px;
   }
   #add-form, #edit-form, #delete-form {
     width: 270px;
+  }
+  #workout-area h1 {
+    font-size: 250%;
   }
 }
