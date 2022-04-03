@@ -296,7 +296,7 @@ select {
 
 .success {
   text-align: center;
-  height: 600px;
+  height: 400px;
 }
 
 #tick {
@@ -308,6 +308,7 @@ select {
 
 #booked {
   text-align: center;
+  height: 400px;
 }
 
 #cross {
