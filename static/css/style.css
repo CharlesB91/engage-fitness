@@ -329,6 +329,10 @@ select {
 
 @media screen and (max-width: 1000px) {
 
+  #comment-main {
+    width: 550px;
+  }
+
   #workout-area {
     height: 2300px;
   }
@@ -344,6 +348,15 @@ select {
 }
 #workout-area {
     height: 1800px;
+  }
+}
+
+@media screen and (max-width: 820px) {
+  #comment-main {
+    width: 480px !important;
+  }
+  #comment-row {
+    width: 250px;
   }
 }
 
@@ -499,5 +512,11 @@ select {
   }
   #workout-area h1 {
     font-size: 250%;
+  }
+  #content-detail-section img {
+    width: 280px !important;
+  }
+  #comment-main {
+    width: 270px !important;
   }
 }
