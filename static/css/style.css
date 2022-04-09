@@ -305,6 +305,9 @@ select {
   color: green;
 }
 
+#success-info-area {
+    padding: 10px;
+}
 
 /* Already Booked Page */
 
@@ -366,7 +369,7 @@ select {
   #comment-row {
     width: 250px;
   }
-  .inform {
+  .inform, .success-info {
       font-size: 250%;
 
 }
@@ -431,7 +434,7 @@ select {
 #comment-row {
   padding-left: 0;
 }
-.inform {
+.inform, .success-info {
   font-size: 150%;
 }
 .form-book {
@@ -540,5 +543,4 @@ select {
     width: 250px !important;
     padding-left: 10px;
   }
-}
 }
