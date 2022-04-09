@@ -1,6 +1,9 @@
 {% extends "base.html" %} {% block content %} {% load static %} 
 {% if user.is_authenticated %}
-<h1 class="inform">You Cant Book Appointments For Previous Dates</h1>
+<div id="inform-area">
+    <h1 class="inform">You Cant Book Appointments For Previous Dates</h1>
+    <a class="btn btn-signup green" href="/availability" aria-label="book-PT-121">Book 1-1 Session</a>
+</div>
 {% else %}
 <h1>Please Log In</h1>
 {% endif %} {% endblock content %}

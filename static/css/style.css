@@ -317,6 +317,12 @@ select {
   color: red;
 }
 
+/* Previous Dates Page */
+
+#inform-area {
+    text-align: center;
+}
+
 /* Responsive Styles */
 
 @media screen and (max-width: 1050px) {
@@ -360,6 +366,9 @@ select {
   #comment-row {
     width: 250px;
   }
+  .inform {
+      font-size: 250%;
+
 }
 
 @media screen and (max-width: 800px) {
@@ -423,7 +432,7 @@ select {
   padding-left: 0;
 }
 .inform {
-  font-size: 200%;
+  font-size: 150%;
 }
 .form-book {
   width: 300px;
@@ -531,4 +540,5 @@ select {
     width: 250px !important;
     padding-left: 10px;
   }
+}
 }
