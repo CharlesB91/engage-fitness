@@ -182,7 +182,12 @@ select {
   display: block !important;
 }
 
-/* Add WorkOut Area */
+/* Add/Edit/Delete WorkOut Area */
+
+#delete {
+  height: 600px !important;
+}
+
 
 #add-form, #edit-form, #delete-form {
   width: 800px;
@@ -204,6 +209,7 @@ select {
   font-size: 120%;
   width: 200px;
 }
+
 
 /* Content Detail Page */
 
@@ -520,8 +526,8 @@ select {
   #workout-area img {
   height: 250px !important;
   width: 250px;
-}
-#workout-area {
+  }
+  #workout-area {
     height: 3200px;
   }
   #add-form, #edit-form, #delete-form {
@@ -543,4 +549,5 @@ select {
     width: 250px !important;
     padding-left: 10px;
   }
+}
 }
