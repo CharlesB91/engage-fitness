@@ -108,10 +108,10 @@ var MaterialDateTimePicker = {
 };
 $(document).ready(function () {
   M.AutoInit();
-  var DateField = MaterialDateTimePicker.create($("#datetime"));
+  var DateField = MaterialDateTimePicker.create($(".datetime"));
 });
 $(document).ready(function () {
   M.AutoInit();
-  var DateField = MaterialDateTimePicker.create($("#datetime2"));
+  var DateField = MaterialDateTimePicker.create($(".datetime2"));
 });
 

@@ -9,13 +9,13 @@
           type="text"
           name="name"
           maxlength="80"
-          required_id="id_name"
+          id="id_name"
           required
         />
         <label for="id_email">Email</label>
         <input
           type="email"
-          required_id="id_email"
+          id="id_email"
           name="email"
           max_length="254"
           required
@@ -24,19 +24,18 @@
         <input
           type="text"
           name="start_date"
-          required_id="id_start_date"
+          id="id_start_date"
           placeholder="Select Date & Time"
-          id="datetime"
+          class="datetime"
           required
         />
         <label for="id_end_date">End Date & Time</label>
         <input
           type="text"
           name="end_date"
-          required_id="id_end_date"
+          id="id_end_date"
           placeholder="Select Date & Time"
-          class="datepicker"
-          id="datetime2"
+          class="datepicker datetime2"
           required
         />
         <button class="btn btn-signup red green" type="submit" aria-label="submit-book">Book</button>
