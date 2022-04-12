@@ -2,10 +2,6 @@ from django.db import models
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 
-# Create your models here.
-
-# Models Table
-
 
 class Post(models.Model):
 
@@ -20,11 +16,10 @@ class Post(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
 
     class Meta:
-        # ordered created on field starting with newest first
         ordering = ['-created_on']
 
     def __str__(self):
-        return self.title
+        return f"{self.title}"
 
 
 class Comment(models.Model):
@@ -50,7 +45,7 @@ class Appointment(models.Model):
     end_date = models.DateTimeField()
 
     def __str__(self):
-        return f"{self.email} {self.name} has booked {self.start_date} & until {self.end_date}"
+        return f"{self.email} {self.name} has booked {self.start_date}"
 
 
 
