@@ -1,29 +1,4 @@
 {% extends "base.html" %} {% block content %} {% load static %}
-<style>
-  #box {
-    background-image: url("{% static 'img/home-img.jpg' %}");
-    height: 700px;
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    overflow: hidden;
-    text-align: center;
-  }
-
-  @media screen and (max-width: 480px) {
-    #box {
-      background-image: url("{% static 'img/home-img.jpg' %}");
-      height: 500px;
-      background-position: top;
-      background-repeat: no-repeat;
-      background-size: cover;
-      position: relative;
-      overflow: hidden;
-      text-align: center;
-    }
-  }
-</style>
 
 <!-- Inital Home Display With Fitness Info -->
 <section id="box">
@@ -83,7 +58,7 @@
         <div class="col">
           <img
             src="{% static 'img/first_review.jpg' %}"
-            id="review_img"
+            class="review_img"
             alt="first_review_client_photo"
           />
           <h2>Ben</h2>
@@ -104,7 +79,7 @@
         <div class="col">
           <img
             src="{% static 'img/third_review.jpg' %}"
-            id="review_img"
+            class="review_img"
             alt="third_review_client_photo"
           />
           <h2>Ian</h2>
@@ -126,7 +101,7 @@
         <div class="col">
           <img
             src="{% static 'img/fourth_review.jpg' %}"
-            id="review_img"
+            class="review_img"
             alt="fourth_review_client_photo"
           />
           <h2>Rebecca</h2>
