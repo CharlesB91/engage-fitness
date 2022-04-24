@@ -1,6 +1,6 @@
 {% extends "base.html" %} {% block content %} {% load static %}
-
 <!-- Work Out Content List -->
+
 {% if user.is_authenticated %} {% if user.is_staff %}
 <div id="create-area">
   <a class="btn btn-signup green darken-1" href="{% url 'add-workout' %}" aria-label="add-workout"

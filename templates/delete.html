@@ -1,5 +1,7 @@
 {% extends "base.html" %} {% block content %} {% load static %} 
 {% if user.is_staff %}
+<!-- Delete Workout Page -->
+
 <div id="delete">
   <form id="delete-form" method="POST">
     {% csrf_token %}

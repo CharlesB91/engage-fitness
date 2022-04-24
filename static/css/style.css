@@ -15,6 +15,7 @@ body {
   font-family: "Bebas Neue", cursive;
 }
 
+
 /* Nav Bar */
 
 #nav {
@@ -61,6 +62,7 @@ body {
   color: #8ca1a5;
 }
 
+
 /* About Content  */
 
 #middle {
@@ -88,6 +90,7 @@ body {
 #middle hr {
   width: 900px;
 }
+
 
 /* Reviews */
 
@@ -138,6 +141,7 @@ body {
   color: black;
 }
 
+
 /* Workout Area Content List Page */
 
 #workout-area {
@@ -181,6 +185,7 @@ body {
 select {
   display: block !important;
 }
+
 
 /* Add/Edit/Delete WorkOut Area */
 
@@ -283,6 +288,7 @@ select {
   padding-left: 20px;
 }
 
+
 /* Booking Page */
 
 #book-head {
@@ -300,6 +306,7 @@ select {
   justify-content: center;
 }
 
+
 /* Success Page */
 
 .success {
@@ -315,6 +322,7 @@ select {
     padding: 10px;
 }
 
+
 /* Already Booked Page */
 
 #booked {
@@ -326,11 +334,13 @@ select {
   color: red;
 }
 
+
 /* Previous Dates Page */
 
 #inform-area {
     text-align: center;
 }
+
 
 /* Responsive Styles */
 
