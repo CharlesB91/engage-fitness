@@ -4,6 +4,8 @@ from django.forms import ModelForm
 from django_summernote.widgets import SummernoteWidget
 
 
+# Create Workout Form
+
 class MakeWorkOutForm(forms.ModelForm):
 
     class Meta:
@@ -14,6 +16,8 @@ class MakeWorkOutForm(forms.ModelForm):
             'content': SummernoteWidget(),
         }
 
+
+# Edit Workout Form
 
 class EditWorkOutForm(forms.ModelForm):
 
@@ -26,12 +30,16 @@ class EditWorkOutForm(forms.ModelForm):
         }
 
 
+# Comment Form
+
 class CommentForm(forms.ModelForm):
 
     class Meta:
         model = Comment
         fields = ('body',)
 
+
+# Appointment Booking Form
 
 class AvailabilityForm(forms.Form):
 
@@ -41,5 +49,3 @@ class AvailabilityForm(forms.Form):
                                      input_formats=['%Y-%m-%d%H:%M'])
     end_date = forms.DateTimeField(required=True,
                                    input_formats=['%Y-%m-%d%H:%M'])
-
-

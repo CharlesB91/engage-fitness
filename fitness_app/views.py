@@ -8,9 +8,13 @@ from django.core.mail import send_mail
 from django.utils import timezone
 
 
+# Home Page
+
 def home_page(request):
     return render(request, 'index.html')
 
+
+# Content List & Detail Page
 
 class PostList(generic.ListView):
     model = Post
@@ -65,6 +69,8 @@ class PostDetail(View):
         )
 
 
+# Create Workout Page
+
 class createWorkOut(View):
 
     def get(self, request, *args, **kwargs):
@@ -83,6 +89,8 @@ class createWorkOut(View):
 
         return render(request, "success-add.html")
 
+
+# Edit Workout Page
 
 class EditWorkOut(View):
     def get(self, request, slug, *args, **kwargs):
@@ -103,6 +111,8 @@ class EditWorkOut(View):
         return render(request, "success-edit.html")
 
 
+# Delete Workout Page
+
 class DeleteWorkOut(View):
 
     def get(self, request, slug, *args, **kwargs):
@@ -118,6 +128,8 @@ class DeleteWorkOut(View):
 
         return render(request, "delete.html")
 
+
+# Booking Page
 
 class BookingView(View):
 

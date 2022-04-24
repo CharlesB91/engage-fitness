@@ -2,6 +2,8 @@ from . import views
 from django.urls import path
 
 
+# Url Paths
+
 urlpatterns = [
     path('content-list/', views.PostList.as_view(), name='content-list'),
     path('add-workout/', views.createWorkOut.as_view(), name='add-workout'),

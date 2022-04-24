@@ -2,6 +2,7 @@ from django.contrib import admin
 from .models import Post, Comment, Appointment
 from django_summernote.admin import SummernoteModelAdmin
 
+
 # Appointments
 
 admin.site.register(Appointment)
@@ -30,4 +31,3 @@ class CommentAdmin(admin.ModelAdmin):
 
     def approve_comments(self, request, queryset):
         queryset.update(approved=True)
-

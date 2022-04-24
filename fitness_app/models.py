@@ -3,6 +3,8 @@ from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 
 
+# Post Model
+
 class Post(models.Model):
 
     title = models.CharField(max_length=200, unique=True)
@@ -22,6 +24,8 @@ class Post(models.Model):
         return f"{self.title}"
 
 
+# Comment Model
+
 class Comment(models.Model):
     post = models.ForeignKey(Post, on_delete=models.CASCADE,
                              related_name="comments")
@@ -38,6 +42,8 @@ class Comment(models.Model):
         return f"Comment {self.body} by {self.name}"
 
 
+# Appointment Model
+
 class Appointment(models.Model):
     name = models.CharField(max_length=80)
     email = models.EmailField(max_length=254)
@@ -46,11 +52,3 @@ class Appointment(models.Model):
 
     def __str__(self):
         return f"{self.email} {self.name} has booked {self.start_date}"
-
-
-
-
-
-
-
-
