@@ -2,7 +2,7 @@
 {% if user.is_authenticated %}
     <h1 id="book-head">Book Your 1-2-1 Session</h1>
     <div id="appointment-area">
-      <form class="form-book" action="" method="POST" id="datetimepicker1">
+      <form class="form-book" method="POST" id="datetimepicker1">
         {% csrf_token %}
         <label for="id_name">Name</label>
         <input
