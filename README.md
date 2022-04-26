@@ -1,1 +1,1 @@
-![Final ERD](static/read-me-img/wireframes.png)
+![Final ERD](https://github.com/CharlesB91/engage-fitness/blob/main/static/img/read-me-img/wireframes.png)
