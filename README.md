@@ -164,6 +164,15 @@ I wanted to create a web based applicaion allowing users to log in and view work
 - Materialize CSS
 
 
+## Testing
+
+### W3C Validator
+
+#### HTML Validator 
+
+
+
+
 
 
 
