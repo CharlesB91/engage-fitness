@@ -145,6 +145,15 @@ I wanted to create a web based applicaion allowing users to log in and view work
 ![Delete](https://github.com/CharlesB91/engage-fitness/blob/main/static/img/read-me-img/delete.PNG)
 
 
+## Database Model
+
+- Here is a diagram of my database model used in this project.
+
+![Data-Model](https://github.com/CharlesB91/engage-fitness/blob/main/static/img/read-me-img/delete.PNG)
+
+
+
+
 
 
 
