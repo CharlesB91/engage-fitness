@@ -83,6 +83,12 @@ I wanted to create a web based applicaion allowing users to log in and view work
 ![Info-Area](https://github.com/CharlesB91/engage-fitness/blob/main/static/img/read-me-img/info-section.PNG)
 ![Reviews](https://github.com/CharlesB91/engage-fitness/blob/main/static/img/read-me-img/reviews.PNG)
 
+### Nav Bar
+
+- This area has links to relevant social media
+
+![Footer](https://github.com/CharlesB91/engage-fitness/blob/main/static/img/read-me-img/footer.PNG)
+
 ### Content List
 
 - This area features a list of each workout posted.
@@ -97,6 +103,23 @@ I wanted to create a web based applicaion allowing users to log in and view work
 
 ![Content-detail](https://github.com/CharlesB91/engage-fitness/blob/main/static/img/read-me-img/detail-section.PNG)
 ![Content-detail](https://github.com/CharlesB91/engage-fitness/blob/main/static/img/read-me-img/detail-section2.PNG)
+
+### Comments
+
+- This area users can add comments on their feedback or anything in general.
+- Comments are approved by admin.
+
+![Comments](https://github.com/CharlesB91/engage-fitness/blob/main/static/img/read-me-img/comments.PNG)
+
+### Booking Page
+
+- This area user can book virtual PT sessions.
+- They are asking for name, email, start date & start time, End date & End Time - Future feature would be to have end date auto generating as same date as start. 
+- When user clicks book the site will check if there is avaliabilty within the database. 
+
+![Booking-Page](https://github.com/CharlesB91/engage-fitness/blob/main/static/img/read-me-img/booking.PNG)
+
+
 
 
 
