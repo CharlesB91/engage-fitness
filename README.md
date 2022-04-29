@@ -327,11 +327,11 @@ You will need to also install all required packages in order to run this applica
 ## Credits
 
 - Code Institue Blog site walk through - This provided me with logic code to create my content list, content detail and comments feature. 
-- ![DarshanDev](https://www.youtube.com/watch?v=yenjz1Wv9Yo) - This provided logic code for booking system. 
-- ![Stackoverflow](https://stackoverflow.com/questions/70085722/date-time-field-django-models) - This helped me resolve my formatting within the datetime picker. 
+- [DarshanDev](https://www.youtube.com/watch?v=yenjz1Wv9Yo) - This provided logic code for booking system. 
+- [Stackoverflow](https://stackoverflow.com/questions/70085722/date-time-field-django-models) - This helped me resolve my formatting within the datetime picker. 
 - Tutor support - This quided me on how to query database for appointment booker. 
-- ![DennisIvy](https://www.youtube.com/watch?v=EX6Tt-ZW0so) - Provided logic on how to implment full CRUD. 
-- ![fawadtariq](https://github.com/fawadtariq/materialize-datetimepicker) - materlizse css datetime picker.
+- [DennisIvy](https://www.youtube.com/watch?v=EX6Tt-ZW0so) - Provided logic on how to implment full CRUD. 
+- [fawadtariq](https://github.com/fawadtariq/materialize-datetimepicker) - materlizse css datetime picker.
 
 
 
