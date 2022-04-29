@@ -1,16 +1,15 @@
 # Engage Fitness
 
-Enagae Fitness is a industry ready finess application helping users acheive their ultimate fitness goals. In the wake of COVID-19 the fitness industy took a massive hit with people unable to leave their homes and visit a gym. The fitness industy had to venture into the world of tech to help their client meet their fitness goals at home. Thankfully Engage Fitness offers daily workouts from qaulified personal trainers. The site offers full interactive services where users can comment on their experiences using a particular work out. If a user feels they need more support or a 1-2-1 session they can use the booking service where they can book in a time with a personal trainer.
+Engage Fitness is a industry ready fitness application helping users achieve their ultimate fitness goals. In the wake of COVID-19 the fitness industry took a massive hit with people unable to leave their homes and visit a gym. The fitness industry had to venture into the world of tech to help their client meet their fitness goals at home. Thankfully Engage Fitness offers daily workouts from qualified personal trainers. The site offers full interactive services where users can comment on their experiences using a particular work out. If a user feels they need more support or a 1-2-1 session they can use the booking service where they can book in a time with a personal trainer.
 
 ![Home-Page](https://github.com/CharlesB91/engage-fitness/blob/main/static/img/read-me-img/homepage.PNG)
 
 [Deployed Site](https://engagefitness.herokuapp.com/)
 
 
-
 ## User Experience 
 
-I wanted to create a web based applicaion allowing users to log in and view workout content. These workouts come with pictures, discription and videos. Users can comment on each workout to feedback their experience. Users can also use the booking service where they can book in time with a PT. They will receive confirmation of this via email with a zoom link. Due to the goal of this application authorised users can only comment on workouts. Staff users and admin users can create workouts, edit works outs & delete workouts via the sites interface. Did not provide this full fucntionality to all users as this would defeate the purpose of the site. 
+I wanted to create a web based application allowing users to log in and view workout content. These workouts come with pictures, description and videos. Users can comment on each workout to feedback their experience. Users can also use the booking service where they can book in time with a PT. They will receive confirmation of this via email with a zoom link. Due to the goal of this application authorised users can only comment on workouts. Staff users and admin users can create workouts, edit works outs & delete workouts via the sites interface. Did not provide this full functionality to all users as this would defeat the purpose of the site. 
 
 ## User Stories
 
@@ -41,14 +40,11 @@ I wanted to create a web based applicaion allowing users to log in and view work
 - USER STORY: Approve comments.
 - USER STORY: Manage posts.
 
-
 ## Design
-
 
 ### Wireframe
 
 [Wireframes](https://github.com/CharlesB91/engage-fitness/blob/main/static/img/read-me-img/wireframes.png)
-
 
 ### Colour
 
@@ -59,11 +55,9 @@ I wanted to create a web based applicaion allowing users to log in and view work
 - #fffff for the background colour - feel this creates a great contract between this and the typography as i was looking for this to stand out.
 - I used the built in colours from materialize.css for the buttons within the site.
 
-
 ### Typography
 
 - For this area i focused one font which is "Bebas Neue", cursive; as feel this crates an assertive tone. This was used from Google Fonts.
-
 
 ## Features
 
@@ -77,7 +71,7 @@ I wanted to create a web based applicaion allowing users to log in and view work
 
 ### Home Page
 
-- This area features a general infomration section which explains what the sites offers.
+- This area features a general information section which explains what the sites offers.
 - This area also features a client reviews section.
 
 ![Info-Area](https://github.com/CharlesB91/engage-fitness/blob/main/static/img/read-me-img/info-section.PNG)
@@ -92,7 +86,7 @@ I wanted to create a web based applicaion allowing users to log in and view work
 ### Content List
 
 - This area features a list of each workout posted.
-- The user can click on "view workout" for more detais. 
+- The user can click on "view workout" for more details. 
 
 ![Content-List](https://github.com/CharlesB91/engage-fitness/blob/main/static/img/read-me-img/content-list.PNG)
 
@@ -115,7 +109,7 @@ I wanted to create a web based applicaion allowing users to log in and view work
 
 - This area user can book virtual PT sessions.
 - They are asking for name, email, start date & start time, End date & End Time - Future feature would be to have end date auto generating as same date as start. 
-- When user clicks book the site will check if there is avaliabilty within the database. 
+- When user clicks book the site will check if there is availability within the database. 
 
 ![Booking-Page](https://github.com/CharlesB91/engage-fitness/blob/main/static/img/read-me-img/booking.PNG)
 
@@ -123,7 +117,7 @@ I wanted to create a web based applicaion allowing users to log in and view work
 
 - This area is restricted to only admin & staff users.
 - This will generate a form where the select user an post a workout of their choice
-- For this area there is a default image as an exisiting bug relatig to cloudinary is preventing adding new images. 
+- For this area there is a default image as an existing bug relating to cloudinary is preventing adding new images. 
 
 ![Create-Workout](https://github.com/CharlesB91/engage-fitness/blob/main/static/img/read-me-img/create.PNG)
 ![Create-Workout-Form](https://github.com/CharlesB91/engage-fitness/blob/main/static/img/read-me-img/create-form.PNG)
@@ -132,7 +126,7 @@ I wanted to create a web based applicaion allowing users to log in and view work
 
 - This area is restricted to only admin & staff users.
 - This will generate a form where the select user can edit a selected post.
-- For this area there is a default image as an exisiting bug relatig to cloudinary is preventing adding new images. 
+- For this area there is a default image as an existing bug relating to cloudinary is preventing adding new images. 
 
 ![Edit-Workout](https://github.com/CharlesB91/engage-fitness/blob/main/static/img/read-me-img/edit-delete.PNG)
 ![Edit-Workout-Form](https://github.com/CharlesB91/engage-fitness/blob/main/static/img/read-me-img/edit-form.PNG)
@@ -140,17 +134,15 @@ I wanted to create a web based applicaion allowing users to log in and view work
 ### Delete Workout
 
 - This area is restricted to only admin & staff users.
-- This section will offer the option to delete the selected post of revent back to the worout list. 
+- This section will offer the option to delete the selected post or revert back to the workout list. 
 
 ![Delete](https://github.com/CharlesB91/engage-fitness/blob/main/static/img/read-me-img/delete.PNG)
-
 
 ## Database Model
 
 - Here is a diagram of my database model used in this project.
 
 ![Data-Model](https://github.com/CharlesB91/engage-fitness/blob/main/static/img/read-me-img/Diagram.drawio.png)
-
 
 ## Technologies Used
 
@@ -162,7 +154,6 @@ I wanted to create a web based applicaion allowing users to log in and view work
 - Django
 - Postgres SQL
 - Materialize CSS
-
 
 ## Testing
 
@@ -186,12 +177,12 @@ I wanted to create a web based applicaion allowing users to log in and view work
 
 ### Pep8 Checker 
 
-- Pyton code has been ran throug this with no errors.
+- Pyton code has been ran thrown this with no errors.
 - Have not ran setting.py through this as this code already comes inclusive with django. 
 
 ### Googe Lighthouse
 
-- Google lighthouse has been used to test accessibilty of this site. This shows above 90
+- Google lighthouse has been used to test accessibility of this site. This shows above 90
 
 ![Lighthouse](https://github.com/CharlesB91/engage-fitness/blob/main/static/img/read-me-img/lighthouse.PNG
 )
@@ -209,20 +200,18 @@ I wanted to create a web based applicaion allowing users to log in and view work
 - Can a staff/admin user edit a workout - Yes
 - Can a staff/admin user delete a workout - Yes
 
-
 ## Bugs
 
 ### Resolved Bugs
 
-- Date and time picker. Originally database was set up with data and time in seperate schemas. This proveded really diffuculat for the database to query for available appointments. Discocvered this query should be inclusive and data and time together. Implemented a datatime picker (https://github.com/fawadtariq/materialize-datetimepicker)
-- Datatime Picker format issue. When appointment was being booked django was thoughing a formatting error. Discovered that datatime picker had to be formatted a certain way. Reached out Tutor Support & Stackoverflow (https://stackoverflow.com/questions/70085722/date-time-field-django-models)
-- Deployment Issue - Site was not rendering when site has been deployed - This was due to a summer note issue. Updated requirments txt which resolved this issue. 
+- Date and time picker. Originally database was set up with data and time in separate schemas. This provided really difficult for the database to query for available appointments. Discovered this query should be inclusive and data and time together. Implemented a data time picker (https://github.com/fawadtariq/materialize-datetimepicker)
+- Data time Picker format issue. When appointment was being booked django was throwing a formatting error. Discovered that data time picker had to be formatted a certain way. Reached out Tutor Support & Stackoverflow (https://stackoverflow.com/questions/70085722/date-time-field-django-models)
+- Deployment Issue - Site was not rendering when site has been deployed - This was due to a summer note issue. Updated requirements txt which resolved this issue. 
 - Site was throwing 500 error when rendering. This was due to a broken html tag. 
 
 ### Unresolved Bug
 
-- The only Unresolved bug which remains is when creating & editing working out i could not upload an image to cloudinary. Searched stackoverflow and cloudinary however could not find solution. If a new workout is created via the interface a default image is selected. Images can be uploaded successfully via django admin site. 
-
+- The only Unresolved bug which remains is when creating & editing working out I could not upload an image to cloudinary. Searched stackoverflow and cloudinary however could not find solution. If a new workout is created via the interface a default image is selected. Images can be uploaded successfully via django admin site. 
 
 
 ## Deployment
@@ -254,7 +243,7 @@ The env.py files is where the projects secret environment variables are stored. 
     import env
     ```
 
-9. Then, we need to replace the current insecre secret key with ```os.environ.get('SECRET_KEY)'```, that we set witin the env.py file.
+9. Then, we need to replace the current secret key with ```os.environ.get('SECRET_KEY)'```, that we set within the env.py file.
 
 10. Once the secret key is replaced, scroll down to DATABASES to connect to the Postgres database. Comment out the current code and add the following python dictionary: 
 ```python
@@ -265,7 +254,7 @@ DATABASES = { 'default': dj_database_url.parse(os.environ.get('DATABASE_URL')) }
 
 12. Then on Heroku add to the Config Vars, DISABLE_COLLECTSTATIC = 1, as a temporary measure to enable deployment without any static files, this will be removed when it is time to deploy the full project.
 
-13. Next we need to tell Django where to store the madia and static files. Towards the bottom of settings.py file we can add:
+13. Next we need to tell Django where to store the media and static files. Towards the bottom of settings.py file we can add:
 
 ```python
 STATIC_URL = '/static/'
@@ -288,7 +277,7 @@ ALLOWED_HOSTS = ['YOUR-APP-NAME-HERE', 'localhost']
 
 18. Scroll down to the Automatic and Manual Deploys sections. Click 'Deploy Branch' in the Manual Deploy section and waited as Heroku installed all dependencies and deployed the code.
 
-21. Once the project is finnished deploying, click 'Open App' to see the newly deployed project.
+21. Once the project is finished deploying, click 'Open App' to see the newly deployed project.
 
 22. Before deploying the final draft of your project you must:
 
@@ -323,50 +312,11 @@ Alternatively, if using Gitpod, you can click below to create your own workspace
 You will need to also install all required packages in order to run this application on Heroku, refer to [requirements.txt](requirements.txt)
 * Command to install this apps requirements is `pip3 install -r requirements.txt`
 
-
 ## Credits
 
-- Code Institue Blog site walk through - This provided me with logic code to create my content list, content detail and comments feature. 
+- Code Institute Blog site walk through - This provided me with logic code to create my content list, content detail and comments feature. 
 - [DarshanDev](https://www.youtube.com/watch?v=yenjz1Wv9Yo) - This provided logic code for booking system. 
 - [Stackoverflow](https://stackoverflow.com/questions/70085722/date-time-field-django-models) - This helped me resolve my formatting within the datetime picker. 
-- Tutor support - This quided me on how to query database for appointment booker. 
-- [DennisIvy](https://www.youtube.com/watch?v=EX6Tt-ZW0so) - Provided logic on how to implment full CRUD. 
+- Tutor support - This guided me on how to query database for appointment booker. 
+- [DennisIvy](https://www.youtube.com/watch?v=EX6Tt-ZW0so) - Provided logic on how to implement full CRUD. 
 - [fawadtariq](https://github.com/fawadtariq/materialize-datetimepicker) - materlizse css datetime picker.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
