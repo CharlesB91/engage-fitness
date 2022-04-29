@@ -83,6 +83,23 @@ I wanted to create a web based applicaion allowing users to log in and view work
 ![Info-Area](https://github.com/CharlesB91/engage-fitness/blob/main/static/img/read-me-img/info-section.PNG)
 ![Reviews](https://github.com/CharlesB91/engage-fitness/blob/main/static/img/read-me-img/reviews.PNG)
 
+### Content List
+
+- This area features a list of each workout posted.
+- The user can click on "view workout" for more detais. 
+
+![Content-List](https://github.com/CharlesB91/engage-fitness/blob/main/static/img/read-me-img/content-list.PNG)
+
+### Content Detail
+
+- This area features a detailed description of the workout.
+- This will include an image, video tutorial, step-by-step instruction.
+
+![Content-detail](https://github.com/CharlesB91/engage-fitness/blob/main/static/img/read-me-img/detail-section.PNG)
+![Content-detail](https://github.com/CharlesB91/engage-fitness/blob/main/static/img/read-me-img/detail-section2.PNG)
+
+
+
 
 
 
