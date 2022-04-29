@@ -215,7 +215,7 @@ I wanted to create a web based applicaion allowing users to log in and view work
 ### Resolved Bugs
 
 - Date and time picker. Originally database was set up with data and time in seperate schemas. This proveded really diffuculat for the database to query for available appointments. Discocvered this query should be inclusive and data and time together. Implemented a datatime picker (https://github.com/fawadtariq/materialize-datetimepicker)
-- Datatime Picker format issue. When appointment was being booked django was thoughing a formatting error. Discovered that datatime picker had to be formatted a certain way. Reached out Tutor Support.
+- Datatime Picker format issue. When appointment was being booked django was thoughing a formatting error. Discovered that datatime picker had to be formatted a certain way. Reached out Tutor Support & Stackoverflow (https://stackoverflow.com/questions/70085722/date-time-field-django-models)
 - Deployment Issue - Site was not rendering when site has been deployed - This was due to a summer note issue. Updated requirments txt which resolved this issue. 
 - Site was throwing 500 error when rendering. This was due to a broken html tag. 
 
@@ -223,7 +223,9 @@ I wanted to create a web based applicaion allowing users to log in and view work
 
 - The only Unresolved bug which remains is when creating & editing working out i could not upload an image to cloudinary. Searched stackoverflow and cloudinary however could not find solution. If a new workout is created via the interface a default image is selected. Images can be uploaded successfully via django admin site. 
 
-# Deployment
+
+
+## Deployment
  
 Deploying the project using Heroku:
 
@@ -320,7 +322,16 @@ Alternatively, if using Gitpod, you can click below to create your own workspace
 
 You will need to also install all required packages in order to run this application on Heroku, refer to [requirements.txt](requirements.txt)
 * Command to install this apps requirements is `pip3 install -r requirements.txt`
- 
+
+
+## Credits
+
+- Code Institue Blog site walk through - This provided me with logic code to create my content list, content detail and comments feature. 
+- ![DarshanDev](https://www.youtube.com/watch?v=yenjz1Wv9Yo) - This provided logic code for booking system. 
+- ![Stackoverflow](https://stackoverflow.com/questions/70085722/date-time-field-django-models) - This helped me resolve my formatting within the datetime picker. 
+- Tutor support - This quided me on how to query database for appointment booker. 
+- ![DennisIvy](https://www.youtube.com/watch?v=EX6Tt-ZW0so) - Provided logic on how to implment full CRUD. 
+- ![fawadtariq](https://github.com/fawadtariq/materialize-datetimepicker) - materlizse css datetime picker.
 
 
 
