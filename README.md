@@ -119,6 +119,26 @@ I wanted to create a web based applicaion allowing users to log in and view work
 
 ![Booking-Page](https://github.com/CharlesB91/engage-fitness/blob/main/static/img/read-me-img/booking.PNG)
 
+### Create Workout
+
+- This area is restricted to only admin & staff users.
+- This will generate a form where the select user an post a workout of their choice
+- For this area there is a default image as an exisiting bug relatig to cloudinary is preventing adding new images. 
+
+![Create-Workout](https://github.com/CharlesB91/engage-fitness/blob/main/static/img/read-me-img/create.PNG)
+![Create-Workout-Form](https://github.com/CharlesB91/engage-fitness/blob/main/static/img/read-me-img/create-form.PNG)
+
+### Edit Workout
+
+- This area is restricted to only admin & staff users.
+- This will generate a form where the select user can edit a selected post.
+- For this area there is a default image as an exisiting bug relatig to cloudinary is preventing adding new images. 
+
+![Edit-Workout](https://github.com/CharlesB91/engage-fitness/blob/main/static/img/read-me-img/edit-delete.PNG)
+![Edit-Workout-Form](https://github.com/CharlesB91/engage-fitness/blob/main/static/img/read-me-img/edit-form.PNG)
+
+
+
 
 
 
