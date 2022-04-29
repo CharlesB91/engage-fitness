@@ -8,7 +8,7 @@ I wanted to create a web based applicaion allowing users to log in and view work
 
 ## User Stories
 
-[Kanban Board can bef found here] (https://github.com/CharlesB91/engage-fitness/projects/1)
+[Kanban Board can bef found here](https://github.com/CharlesB91/engage-fitness/projects/1)
 
 ### Unauthorised Users
 
