@@ -170,6 +170,40 @@ I wanted to create a web based applicaion allowing users to log in and view work
 
 #### HTML Validator 
 
+- The only errors picked up in this area seem to stem from summernote. 
+
+#### CSS Validator 
+
+- The only error showing in this area is.
+- Value Error : letter-spacing only 0 can be a unit. You must put a unit after your number : 0.4.
+- I am unable to locate this within my code therefore i suspect its related to materlizse css.
+
+### JsHint 
+
+- No errors showing in area. 
+- Console is logging the following error - The HTML Control provided is not a valid Input Text type.
+- However is is related to the datetime picker. This error does not appear when on the booking page. 
+
+### Pep8 Checker 
+
+- Pyton code has been ran throug this with no errors.
+- Have not ran setting.py through this as this code already comes inclusive with django. 
+
+### Manual Testing
+
+- Can a user sign up - Yes
+- Can a user log in - Yes
+- Can a user view work out - Yes
+- Can a user post a comment - Yes
+- Can a user book an appointment - Yes
+- Will the appointment booker advise if appointment double booked - Yes
+- Can a staff/admin user create a workout - Yes
+- Can a staff/admin user edit a workout - Yes
+- Can a staff/admin user delete a workout - Yes
+
+
+
+
 
 
 
