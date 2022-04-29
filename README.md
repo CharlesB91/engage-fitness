@@ -2,7 +2,11 @@
 
 Enagae Fitness is a industry ready finess application helping users acheive their ultimate fitness goals. In the wake of COVID-19 the fitness industy took a massive hit with people unable to leave their homes and visit a gym. The fitness industy had to venture into the world of tech to help their client meet their fitness goals at home. Thankfully Engage Fitness offers daily workouts from qaulified personal trainers. The site offers full interactive services where users can comment on their experiences using a particular work out. If a user feels they need more support or a 1-2-1 session they can use the booking service where they can book in a time with a personal trainer.
 
+![Home-Page](https://github.com/CharlesB91/engage-fitness/blob/main/static/img/read-me-img/homepage.PNG)
+
 [Deployed Site](https://engagefitness.herokuapp.com/)
+
+
 
 ## User Experience 
 
@@ -51,6 +55,19 @@ I wanted to create a web based applicaion allowing users to log in and view work
 ![Colour-Pallet](https://github.com/CharlesB91/engage-fitness/blob/main/static/img/read-me-img/colours.PNG)
 
 - For this area i focused on only 2 particular colours.
+- #8ca1a5 for the nav bar
+- #fffff for the background colour - feel this creates a great contract between this and the typography as i was looking for this to stand out.
+- I used the built in colours from materialize.css for the buttons within the site.
+
+
+### Typography
+
+- For this area i focused one font which is "Bebas Neue", cursive; as feel this crates an assertive tone. This was used from Google Fonts.
+
+
+
+
+
 
 
 
