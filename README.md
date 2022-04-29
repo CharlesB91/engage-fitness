@@ -1,1 +1,3 @@
-![Final ERD](https://github.com/CharlesB91/engage-fitness/blob/main/static/img/read-me-img/wireframes.png)
+# Engage Fitness
+
+Enagae Fitness is a industry ready finess application helping users acheive their ultimate fitness goals. In the wake of COVID-19 the fitness industy took a massive hit with people unable to leave their homes and visit a gym. The fitness industy had to venture into the world of tech to help their client meet their fitness goals at home. Thankfully Engage Fitness offers daily workouts from qaulified personal trainers. The site offers full interactive services where users can comment on their experiences using a particular work out. If a user feels they need more support or a 1-2-1 session they can use the booking service where they can book in a time with a personal trainer. This feature will then email the user confirmation along with a zoom link where the sessoin will be hosted. 
