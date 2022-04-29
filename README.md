@@ -12,28 +12,28 @@ I wanted to create a web based applicaion allowing users to log in and view work
 
 ### Unauthorised Users
 
-USER STORY: View Home Page - General Site info & Reviews.
-USER STORY: Account registration.
+- USER STORY: View Home Page - General Site info & Reviews.
+- USER STORY: Account registration.
 
 ### Authorised Users
 
-USER STORY: Site Content List.
-USER STORY: Open a tutorial.
-USER STORY: View comments.
-USER STORY: Comment on a tutorial.
-USER STORY: Book Appointments.
-USER STORY: Avoid Double Bookings - Appointment Booker.
+- USER STORY: Site Content List.
+- USER STORY: Open a tutorial.
+- USER STORY: View comments.
+- USER STORY: Comment on a tutorial.
+- USER STORY: Book Appointments.
+- USER STORY: Avoid Double Bookings - Appointment Booker.
 
 ### Staff Users
 
-USER STORY: Create Workout (Staff only site access).
-USER STORY: Edit Workout (Staff only site access).
-USER STORY: Delete Workout (Staff only site access).
+- USER STORY: Create Workout (Staff only site access).
+- USER STORY: Edit Workout (Staff only site access).
+- USER STORY: Delete Workout (Staff only site access).
 
 ### Admin User
 
-USER STORY: Approve comments.
-USER STORY: Manage posts.
+- USER STORY: Approve comments.
+- USER STORY: Manage posts.
 
 
 
