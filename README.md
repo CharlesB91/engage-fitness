@@ -55,7 +55,7 @@ I wanted to create a web based applicaion allowing users to log in and view work
 ![Colour-Pallet](https://github.com/CharlesB91/engage-fitness/blob/main/static/img/read-me-img/colours.PNG)
 
 - For this area i focused on only 2 particular colours.
-- #8ca1a5 for the nav bar
+- #8ca1a5 for the nav bar.
 - #fffff for the background colour - feel this creates a great contract between this and the typography as i was looking for this to stand out.
 - I used the built in colours from materialize.css for the buttons within the site.
 
@@ -63,6 +63,26 @@ I wanted to create a web based applicaion allowing users to log in and view work
 ### Typography
 
 - For this area i focused one font which is "Bebas Neue", cursive; as feel this crates an assertive tone. This was used from Google Fonts.
+
+
+## Features
+
+### Nav Bar
+
+- This is where the user can navigate easily to each section of the site. 
+- There are 2 different types of nav bars depending on users authentication status.
+
+![Not-Authenticated](https://github.com/CharlesB91/engage-fitness/blob/main/static/img/read-me-img/nav.PNG)
+![Authenticated](https://github.com/CharlesB91/engage-fitness/blob/main/static/img/read-me-img/nav2.PNG)
+
+### Home Page
+
+- This area features a general infomration section which explains what the sites offers.
+- This area also features a client reviews section.
+
+![Info-Area](https://github.com/CharlesB91/engage-fitness/blob/main/static/img/read-me-img/info-section.PNG)
+![Reviews](https://github.com/CharlesB91/engage-fitness/blob/main/static/img/read-me-img/reviews.PNG)
+
 
 
 
