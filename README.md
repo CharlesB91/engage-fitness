@@ -48,7 +48,7 @@ I wanted to create a web based applicaion allowing users to log in and view work
 
 ### Colour
 
-(https://github.com/CharlesB91/engage-fitness/blob/main/static/img/read-me-img/colours.PNG)
+![Colour-Pallet](https://github.com/CharlesB91/engage-fitness/blob/main/static/img/read-me-img/colours.PNG)
 
 - For this area i focused on only 2 particular colours.
 
