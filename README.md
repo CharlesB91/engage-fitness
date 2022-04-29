@@ -107,8 +107,8 @@ I wanted to create a web based application allowing users to log in and view wor
 
 ### Booking Page
 
-- This area user can book virtual PT sessions.
-- They are asking for name, email, start date & start time, End date & End Time - Future feature would be to have end date auto generating as same date as start. 
+- This area users can book virtual PT sessions.
+- In this area they are asked for their name, email, start date & start time, End date & End Time - Future feature would be to have end date auto generating as same date as start. 
 - When user clicks book the site will check if there is availability within the database. 
 
 ![Booking-Page](https://github.com/CharlesB91/engage-fitness/blob/main/static/img/read-me-img/booking.PNG)
@@ -116,7 +116,7 @@ I wanted to create a web based application allowing users to log in and view wor
 ### Create Workout
 
 - This area is restricted to only admin & staff users.
-- This will generate a form where the select user an post a workout of their choice
+- This will generate a form where the select user can post a workout of their choice
 - For this area there is a default image as an existing bug relating to cloudinary is preventing adding new images. 
 
 ![Create-Workout](https://github.com/CharlesB91/engage-fitness/blob/main/static/img/read-me-img/create.PNG)
@@ -172,8 +172,6 @@ I wanted to create a web based application allowing users to log in and view wor
 ### JsHint 
 
 - No errors showing in area. 
-- Console is logging the following error - The HTML Control provided is not a valid Input Text type.
-- However is is related to the datetime picker. This error does not appear when on the booking page. 
 
 ### Pep8 Checker 
 

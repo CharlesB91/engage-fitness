@@ -94,11 +94,7 @@ var MaterialDateTimePicker = {
       ).remove();
       this.addCSSRules();
       return element;
-    } else {
-      console.error(
-        "The HTML Control provided is not a valid Input Text type."
-      );
-    }
+    } 
   },
   addCSSRules: function () {
     $("html > head").append(
