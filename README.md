@@ -137,6 +137,16 @@ I wanted to create a web based applicaion allowing users to log in and view work
 ![Edit-Workout](https://github.com/CharlesB91/engage-fitness/blob/main/static/img/read-me-img/edit-delete.PNG)
 ![Edit-Workout-Form](https://github.com/CharlesB91/engage-fitness/blob/main/static/img/read-me-img/edit-form.PNG)
 
+### Delete Workout
+
+- This area is restricted to only admin & staff users.
+- This section will offer the option to delete the selected post of revent back to the worout list. 
+
+![Delete](https://github.com/CharlesB91/engage-fitness/blob/main/static/img/read-me-img/delete.PNG)
+
+
+
+
 
 
 
