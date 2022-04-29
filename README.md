@@ -152,6 +152,17 @@ I wanted to create a web based applicaion allowing users to log in and view work
 ![Data-Model](https://github.com/CharlesB91/engage-fitness/blob/main/static/img/read-me-img/Diagram.drawio.png)
 
 
+## Technologies Used
+
+- HTML5
+- CSS3
+- JS 
+- JQUERY
+- Python
+- Django
+- Postgres SQL
+- Materialize CSS
+
 
 
 
