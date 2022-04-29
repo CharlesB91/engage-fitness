@@ -36,6 +36,19 @@ I wanted to create a web based applicaion allowing users to log in and view work
 - USER STORY: Manage posts.
 
 
+## Design
+
+### Wireframe
+
+[Wireframes](https://github.com/CharlesB91/engage-fitness/blob/main/static/img/read-me-img/wireframes.png)
+
+
+
+
+
+
+
+
 
 
 
