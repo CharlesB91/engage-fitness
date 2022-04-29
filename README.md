@@ -189,10 +189,18 @@ I wanted to create a web based applicaion allowing users to log in and view work
 - Pyton code has been ran throug this with no errors.
 - Have not ran setting.py through this as this code already comes inclusive with django. 
 
+### Googe Lighthouse
+
+- Google lighthouse has been used to test accessibilty of this site. This shows above 90
+
+![Lighthouse](https://github.com/CharlesB91/engage-fitness/blob/main/static/img/read-me-img/lighthouse.PNG
+)
+
 ### Manual Testing
 
 - Can a user sign up - Yes
 - Can a user log in - Yes
+- Can a user view content list - Yes
 - Can a user view work out - Yes
 - Can a user post a comment - Yes
 - Can a user book an appointment - Yes
