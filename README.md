@@ -193,6 +193,7 @@ I wanted to create a web based application allowing users to log in and view wor
 - Can a user view work out - Yes
 - Can a user post a comment - Yes
 - Can a user book an appointment - Yes
+- Can a user open appointment booker and select day and time - Yes
 - Will the appointment booker advise if appointment double booked - Yes
 - Can a staff/admin user create a workout - Yes
 - Can a staff/admin user edit a workout - Yes

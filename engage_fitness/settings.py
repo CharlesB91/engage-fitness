@@ -29,7 +29,6 @@ DEBUG = True
 
 # X_FRAME_OPTIONS = 'SAMEORIGIN'
 
-# DISABLE_COLLECTSTATIC 1 - This is to be removed when deployed on heroku - Keep in when project is being worked on
 
 ALLOWED_HOSTS = ['engagefitness.herokuapp.com', 'localhost']
 
